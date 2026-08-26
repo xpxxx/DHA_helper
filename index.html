@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>处方计价 · DHA Helper</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <p class="eyebrow">DHA Helper</p>
+      <h1>处方计价</h1>
+      <p class="subtitle">输入药名与用量，自动计算单价、小计与总价</p>
+    </header>
+
+    <section class="panel search-panel" aria-label="添加药品">
+      <label class="field-label" for="search-input">添加药品</label>
+      <div class="search-wrap">
+        <input
+          id="search-input"
+          type="search"
+          autocomplete="off"
+          placeholder="搜索草药或中成药…"
+          aria-autocomplete="list"
+          aria-controls="suggest-list"
+          aria-expanded="false"
+        />
+        <ul id="suggest-list" class="suggest-list" role="listbox" hidden></ul>
+      </div>
+      <p class="hint">草药按克计价 · 中成药按盒计价 · 未找到可添加临时项</p>
+      <button type="button" id="btn-temp" class="btn-text">未找到？添加临时药品</button>
+    </section>
+
+    <section class="panel" aria-label="处方明细">
+      <div class="panel-head">
+        <h2>处方明细</h2>
+        <button type="button" id="btn-clear" class="btn-text" hidden>清空</button>
+      </div>
+      <div id="empty-state" class="empty-state">尚未添加药品</div>
+      <div id="rx-list" class="rx-list" hidden></div>
+    </section>
+
+    <section class="total-bar" aria-live="polite">
+      <div>
+        <p class="total-label">处方总价</p>
+        <p id="item-count" class="item-count">0 项</p>
+      </div>
+      <p id="grand-total" class="grand-total">0.00 <span>DHS</span></p>
+    </section>
+  </div>
+
+  <dialog id="temp-dialog" class="dialog">
+    <form method="dialog" id="temp-form">
+      <h3>添加临时药品</h3>
+      <label>
+        药名
+        <input id="temp-name" type="text" required maxlength="40" placeholder="例如：某某草" />
+      </label>
+      <label>
+        类型
+        <select id="temp-type">
+          <option value="herb">草药（按克）</option>
+          <option value="patent">中成药（按盒）</option>
+        </select>
+      </label>
+      <label>
+        临时单价（DHS）
+        <input id="temp-price" type="number" min="0" step="0.01" required placeholder="0.00" />
+      </label>
+      <label>
+        <span id="temp-qty-label">数量（克）</span>
+        <input id="temp-qty" type="number" min="0" step="0.1" value="1" required />
+      </label>
+      <div class="dialog-actions">
+        <button type="submit" class="btn-primary" value="confirm">加入处方</button>
+        <button type="button" class="btn-text" id="temp-cancel">取消</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>

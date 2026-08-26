@@ -1,0 +1,1878 @@
+{
+  "currency": "DHS",
+  "generatedFrom": [
+    "药品.xlsx",
+    "药品零售价.xlsx"
+  ],
+  "counts": {
+    "herbs": 173,
+    "patents": 37,
+    "total": 210,
+    "skippedHerbsNoPrice": 9,
+    "skippedPatentsNoPrice": 16
+  },
+  "skipped": {
+    "herbsNoPrice": [
+      "紫花苑",
+      "人参片0.8-1.0（B）",
+      "红参片皮",
+      "红参大片",
+      "西洋参",
+      "西洋参片2.0（A）",
+      "红参片1.2-1.4（B）",
+      "鹿茸",
+      "燕窝"
+    ],
+    "patentsNoPrice": [
+      "五子衍宗丸",
+      "益母草颗粒",
+      "胖大海（瓶）",
+      "红霉素眼膏",
+      "罗汉果（瓶）",
+      "香砂和胃丸",
+      "复方小活络丸",
+      "川贝枇杷糖浆",
+      "轻身消胖丸",
+      "同仁大活络丸",
+      "七宝美髯丸",
+      "补中益气丸",
+      "云南白药气雾剂",
+      "颈肩腰腿东鹤老黑膏",
+      "感冒清热颗粒",
+      "杞菊地黄丸"
+    ],
+    "herbPriceConflicts": [],
+    "patentPriceConflicts": []
+  },
+  "medicines": [
+    {
+      "name": "三棱",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.18,
+      "contains": [],
+      "relatedPatents": [
+        "龙胆泻肝丸"
+      ]
+    },
+    {
+      "name": "丹参",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.28,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "乌梅",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.22,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "五倍子",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.75,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "五味子",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.48,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "仙鹤草",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.12,
+      "contains": [],
+      "relatedPatents": [
+        "小柴胡颗粒"
+      ]
+    },
+    {
+      "name": "伸筋草",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.18,
+      "contains": [],
+      "relatedPatents": [
+        "清脑降压片",
+        "香砂六君丸（仲景）"
+      ]
+    },
+    {
+      "name": "僵蚕",
+      "type": "herb",
+      "unit": "克",
+      "price": 1.1,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "党参",
+      "type": "herb",
+      "unit": "克",
+      "price": 1.44,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "决明子",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.08,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "制首乌",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.38,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "北柴胡",
+      "type": "herb",
+      "unit": "克",
+      "price": 1.6,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "厚朴",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.16,
+      "contains": [],
+      "relatedPatents": [
+        "桂枝茯苓丸"
+      ]
+    },
+    {
+      "name": "合欢皮",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.12,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "吴茱萸",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.4,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "地肤子",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.2,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "地骨皮",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.7,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "夜交藤",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.14,
+      "contains": [],
+      "relatedPatents": [
+        "附子理中丸"
+      ]
+    },
+    {
+      "name": "大枣",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.09,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "大黄",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.24,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "天花粉",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.3,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "天麻",
+      "type": "herb",
+      "unit": "克",
+      "price": 1.4,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "女贞子",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.05,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "姜半夏",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.87,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "威灵仙",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.84,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "射干",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.42,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "山药",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.18,
+      "contains": [],
+      "relatedPatents": [
+        "消炎止咳片"
+      ]
+    },
+    {
+      "name": "山萸肉",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.65,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "川木通",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.18,
+      "contains": [],
+      "relatedPatents": [
+        "独活寄生丸"
+      ]
+    },
+    {
+      "name": "川牛膝",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.22,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "川石斛",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.85,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "川穹",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.25,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "川贝母",
+      "type": "herb",
+      "unit": "克",
+      "price": 49.45,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "巴戟天",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.7,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "干姜",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.26,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "广防已",
+      "type": "herb",
+      "unit": "克",
+      "price": 1.8,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "延胡索",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.74,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "当归",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.92,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "旋覆花",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.5,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "木瓜",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.24,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "板蓝根",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.24,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "枳壳",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.2,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "枳实",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.28,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "枸杞子",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.55,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "柏子仁",
+      "type": "herb",
+      "unit": "克",
+      "price": 1.28,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "栀子",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.37,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "桂枝",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.15,
+      "contains": [],
+      "relatedPatents": [
+        "急支糖浆"
+      ]
+    },
+    {
+      "name": "桑叶",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.14,
+      "contains": [],
+      "relatedPatents": [
+        "皮肤病血毒丸"
+      ]
+    },
+    {
+      "name": "桑葚",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.2,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "桔梗",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.58,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "槐米",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.3,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "槐花",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.35,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "款冬花",
+      "type": "herb",
+      "unit": "克",
+      "price": 2.04,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "水蛭（动物）",
+      "type": "herb",
+      "unit": "克",
+      "price": 4.2,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "法半夏",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.35,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "泽泻",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.2,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "浙贝母",
+      "type": "herb",
+      "unit": "克",
+      "price": 1.91,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "浮小麦",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.07,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "海金沙",
+      "type": "herb",
+      "unit": "克",
+      "price": 1.7,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "淡竹叶",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.18,
+      "contains": [],
+      "relatedPatents": [
+        "胃苏颗粒"
+      ]
+    },
+    {
+      "name": "淡豆豉",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.24,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "淫羊藿",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.7,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "滑石",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.06,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "火麻仁",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.2,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "炒山楂",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.09,
+      "contains": [],
+      "relatedPatents": [
+        "复方板蓝根颗粒"
+      ]
+    },
+    {
+      "name": "炒杜仲",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.26,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "炒枣仁",
+      "type": "herb",
+      "unit": "克",
+      "price": 3.8,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "炒白扁豆",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.16,
+      "contains": [],
+      "relatedPatents": [
+        "栀子金花丸"
+      ]
+    },
+    {
+      "name": "炒神曲",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.07,
+      "contains": [],
+      "relatedPatents": [
+        "皮肤病血毒丸"
+      ]
+    },
+    {
+      "name": "炒芡实",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.45,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "炙甘草",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.18,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "炙黄芩",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.26,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "烧瓦楞子",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.06,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "煅牡蛎（动物）",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.06,
+      "contains": [],
+      "relatedPatents": [
+        "同仁乌鸡白凤丸"
+      ]
+    },
+    {
+      "name": "煅禹余粮",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.15,
+      "contains": [],
+      "relatedPatents": [
+        "解郁安神颗粒"
+      ]
+    },
+    {
+      "name": "熟地黄",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.15,
+      "contains": [],
+      "relatedPatents": [
+        "颈康复颗粒",
+        "化毒丹（丸）"
+      ]
+    },
+    {
+      "name": "燀山桃仁（chan）",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.6,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "燀苦杏仁",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.42,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "牛膝",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.24,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "牛蒡子",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.34,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "牡丹皮",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.6,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "独活",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.29,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "猪苓",
+      "type": "herb",
+      "unit": "克",
+      "price": 1.5,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "玄参",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.18,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "玫瑰花",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.65,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "瓜蒌",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.26,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "甘草片",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.26,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "生地黄",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.15,
+      "contains": [],
+      "relatedPatents": [
+        "复方草珊瑚含片"
+      ]
+    },
+    {
+      "name": "生牡蛎",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.03,
+      "contains": [],
+      "relatedPatents": [
+        "坤宝丸"
+      ]
+    },
+    {
+      "name": "生白术",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.35,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "生百部",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.5,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "生薏苡仁",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.12,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "生麦芽",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.07,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "生龙骨",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.2,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "番泻叶",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.14,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "白术",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.98,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "白芍",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.79,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "白芥子",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.18,
+      "contains": [],
+      "relatedPatents": [
+        "正红花油"
+      ]
+    },
+    {
+      "name": "白芷",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.2,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "白薇",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.45,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "白鲜皮",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.85,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "百合",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.76,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "益母草",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.08,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "知母",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.18,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "石决明",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.1,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "石菖蒲",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.35,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "砂仁",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.48,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "秦艽（jiao）",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.79,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "竹茹",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.18,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "紫花地丁",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.18,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "紫苏叶",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.23,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "紫苑",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.29,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "红参",
+      "type": "herb",
+      "unit": "克",
+      "price": 7.0,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "红花",
+      "type": "herb",
+      "unit": "克",
+      "price": 1.26,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "细辛",
+      "type": "herb",
+      "unit": "克",
+      "price": 2.8,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "续断",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.22,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "羌活",
+      "type": "herb",
+      "unit": "克",
+      "price": 2.19,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "肉桂",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.2,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "肉苁蓉",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.26,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "胖大海",
+      "type": "herb",
+      "unit": "克",
+      "price": 2.0,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "苍术",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.4,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "苍耳子",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.12,
+      "contains": [],
+      "relatedPatents": [
+        "金匮肾气丸"
+      ]
+    },
+    {
+      "name": "苦参",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.18,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "茜草（qian）",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.65,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "茯苓",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.29,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "荆芥",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.1,
+      "contains": [],
+      "relatedPatents": [
+        "加味逍遥丸"
+      ]
+    },
+    {
+      "name": "荷叶",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.16,
+      "contains": [],
+      "relatedPatents": [
+        "气滞胃痛颗粒"
+      ]
+    },
+    {
+      "name": "莱菔子",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.16,
+      "contains": [],
+      "relatedPatents": [
+        "天麻头痛片"
+      ]
+    },
+    {
+      "name": "菊花",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.69,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "菟丝子",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.2,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "萹蓄",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.1,
+      "contains": [],
+      "relatedPatents": [
+        "六味地黄丸"
+      ]
+    },
+    {
+      "name": "葛根",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.16,
+      "contains": [],
+      "relatedPatents": [
+        "参苓白术丸"
+      ]
+    },
+    {
+      "name": "蒲公英",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.19,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "薄荷",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.12,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "薏苡仁",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.14,
+      "contains": [],
+      "relatedPatents": [
+        "复方丹参滴"
+      ]
+    },
+    {
+      "name": "薤白",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.58,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "藁本片",
+      "type": "herb",
+      "unit": "克",
+      "price": 1.5,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "藿香",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.14,
+      "contains": [],
+      "relatedPatents": [
+        "京都念慈菴川贝枇杷膏"
+      ]
+    },
+    {
+      "name": "蛇床子",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.32,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "蜜桑白皮",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.4,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "蜜麻黄",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.27,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "蝉衣（动物）",
+      "type": "herb",
+      "unit": "克",
+      "price": 5.8,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "西洋参",
+      "type": "herb",
+      "unit": "克",
+      "price": 2.4,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "覆盆子",
+      "type": "herb",
+      "unit": "克",
+      "price": 1.2,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "败酱草",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.12,
+      "contains": [],
+      "relatedPatents": [
+        "调经促孕丸"
+      ]
+    },
+    {
+      "name": "赤小豆",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.14,
+      "contains": [],
+      "relatedPatents": [
+        "牛黄解毒丸"
+      ]
+    },
+    {
+      "name": "赤芍",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.67,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "车前子",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.26,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "辛夷花",
+      "type": "herb",
+      "unit": "克",
+      "price": 1.1,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "远志",
+      "type": "herb",
+      "unit": "克",
+      "price": 1.5,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "连翘",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.91,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "郁金",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.24,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "醋乳香",
+      "type": "herb",
+      "unit": "克",
+      "price": 1.08,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "醋没药",
+      "type": "herb",
+      "unit": "克",
+      "price": 1.1,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "金钱草",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.16,
+      "contains": [],
+      "relatedPatents": [
+        "新复方芦荟胶囊"
+      ]
+    },
+    {
+      "name": "金银花",
+      "type": "herb",
+      "unit": "克",
+      "price": 1.37,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "钩藤",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.45,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "防风",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.28,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "陈皮",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.16,
+      "contains": [],
+      "relatedPatents": [
+        "云南白药胶囊"
+      ]
+    },
+    {
+      "name": "青皮",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.2,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "香附",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.15,
+      "contains": [],
+      "relatedPatents": [
+        "莲芝消炎片"
+      ]
+    },
+    {
+      "name": "马齿笕",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.12,
+      "contains": [],
+      "relatedPatents": [
+        "人参归脾丸"
+      ]
+    },
+    {
+      "name": "骨碎补",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.18,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "鱼腥草",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.16,
+      "contains": [],
+      "relatedPatents": [
+        "枣仁安神胶囊"
+      ]
+    },
+    {
+      "name": "鳖甲（动物）",
+      "type": "herb",
+      "unit": "克",
+      "price": 1.25,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "鸡内金（动物）",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.18,
+      "contains": [],
+      "relatedPatents": [
+        "妙医抑菌乳膏"
+      ]
+    },
+    {
+      "name": "鸡血藤",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.13,
+      "contains": [],
+      "relatedPatents": [
+        "藿香正气丸"
+      ]
+    },
+    {
+      "name": "麦冬",
+      "type": "herb",
+      "unit": "克",
+      "price": 1.3,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "黄柏",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.99,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "黄芩片",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.35,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "黄连片",
+      "type": "herb",
+      "unit": "克",
+      "price": 4.14,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "黑顺片",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.68,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "龙胆",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.75,
+      "contains": [],
+      "relatedPatents": []
+    },
+    {
+      "name": "云南白药胶囊",
+      "type": "patent",
+      "unit": "盒",
+      "price": 20.9,
+      "contains": [
+        "陈皮"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "京都念慈菴川贝枇杷膏",
+      "type": "patent",
+      "unit": "盒",
+      "price": 28.6,
+      "contains": [
+        "藿香"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "人参归脾丸",
+      "type": "patent",
+      "unit": "盒",
+      "price": 16.5,
+      "contains": [
+        "马齿笕"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "六味地黄丸",
+      "type": "patent",
+      "unit": "盒",
+      "price": 15.5,
+      "contains": [
+        "萹蓄"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "加味逍遥丸",
+      "type": "patent",
+      "unit": "盒",
+      "price": 13.5,
+      "contains": [
+        "荆芥"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "化毒丹（丸）",
+      "type": "patent",
+      "unit": "盒",
+      "price": 16.5,
+      "contains": [
+        "熟地黄"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "参苓白术丸",
+      "type": "patent",
+      "unit": "盒",
+      "price": 15.5,
+      "contains": [
+        "葛根"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "同仁乌鸡白凤丸",
+      "type": "patent",
+      "unit": "盒",
+      "price": 16.5,
+      "contains": [
+        "煅牡蛎（动物）"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "坤宝丸",
+      "type": "patent",
+      "unit": "盒",
+      "price": 12.9,
+      "contains": [
+        "生牡蛎"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "复方丹参滴",
+      "type": "patent",
+      "unit": "盒",
+      "price": 32.2,
+      "contains": [
+        "薏苡仁"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "复方板蓝根颗粒",
+      "type": "patent",
+      "unit": "盒",
+      "price": 12.5,
+      "contains": [
+        "炒山楂"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "复方草珊瑚含片",
+      "type": "patent",
+      "unit": "盒",
+      "price": 9.5,
+      "contains": [
+        "生地黄"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "天麻头痛片",
+      "type": "patent",
+      "unit": "盒",
+      "price": 15.5,
+      "contains": [
+        "莱菔子"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "妙医抑菌乳膏",
+      "type": "patent",
+      "unit": "盒",
+      "price": 15.5,
+      "contains": [
+        "鸡内金（动物）"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "小柴胡颗粒",
+      "type": "patent",
+      "unit": "盒",
+      "price": 14.5,
+      "contains": [
+        "仙鹤草"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "急支糖浆",
+      "type": "patent",
+      "unit": "盒",
+      "price": 20.5,
+      "contains": [
+        "桂枝"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "新复方芦荟胶囊",
+      "type": "patent",
+      "unit": "盒",
+      "price": 12.5,
+      "contains": [
+        "金钱草"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "枣仁安神胶囊",
+      "type": "patent",
+      "unit": "盒",
+      "price": 28.8,
+      "contains": [
+        "鱼腥草"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "栀子金花丸",
+      "type": "patent",
+      "unit": "盒",
+      "price": 12.5,
+      "contains": [
+        "炒白扁豆"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "桂枝茯苓丸",
+      "type": "patent",
+      "unit": "盒",
+      "price": 12.2,
+      "contains": [
+        "厚朴"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "正红花油",
+      "type": "patent",
+      "unit": "盒",
+      "price": 11.2,
+      "contains": [
+        "白芥子"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "气滞胃痛颗粒",
+      "type": "patent",
+      "unit": "盒",
+      "price": 22.8,
+      "contains": [
+        "荷叶"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "消炎止咳片",
+      "type": "patent",
+      "unit": "盒",
+      "price": 15.5,
+      "contains": [
+        "山药"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "清脑降压片",
+      "type": "patent",
+      "unit": "盒",
+      "price": 12.5,
+      "contains": [
+        "伸筋草"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "牛黄解毒丸",
+      "type": "patent",
+      "unit": "盒",
+      "price": 10.5,
+      "contains": [
+        "赤小豆"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "独活寄生丸",
+      "type": "patent",
+      "unit": "盒",
+      "price": 15.5,
+      "contains": [
+        "川木通"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "皮肤病血毒丸",
+      "type": "patent",
+      "unit": "盒",
+      "price": 18.5,
+      "contains": [
+        "炒神曲",
+        "桑叶"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "胃苏颗粒",
+      "type": "patent",
+      "unit": "盒",
+      "price": 28.6,
+      "contains": [
+        "淡竹叶"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "莲芝消炎片",
+      "type": "patent",
+      "unit": "盒",
+      "price": 12.8,
+      "contains": [
+        "香附"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "藿香正气丸",
+      "type": "patent",
+      "unit": "盒",
+      "price": 12.6,
+      "contains": [
+        "鸡血藤"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "解郁安神颗粒",
+      "type": "patent",
+      "unit": "盒",
+      "price": 12.9,
+      "contains": [
+        "煅禹余粮"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "调经促孕丸",
+      "type": "patent",
+      "unit": "盒",
+      "price": 29.5,
+      "contains": [
+        "败酱草"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "金匮肾气丸",
+      "type": "patent",
+      "unit": "盒",
+      "price": 12.6,
+      "contains": [
+        "苍耳子"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "附子理中丸",
+      "type": "patent",
+      "unit": "盒",
+      "price": 12.5,
+      "contains": [
+        "夜交藤"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "颈康复颗粒",
+      "type": "patent",
+      "unit": "盒",
+      "price": 35.5,
+      "contains": [
+        "熟地黄"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "香砂六君丸（仲景）",
+      "type": "patent",
+      "unit": "盒",
+      "price": 27.5,
+      "contains": [
+        "伸筋草"
+      ],
+      "relatedPatents": []
+    },
+    {
+      "name": "龙胆泻肝丸",
+      "type": "patent",
+      "unit": "盒",
+      "price": 18.5,
+      "contains": [
+        "三棱"
+      ],
+      "relatedPatents": []
+    }
+  ]
+}
