@@ -1,9 +1,18 @@
-const currency = "DHS";
 const state = {
   medicines: [],
   byName: new Map(),
   items: [],
   activeSuggest: -1,
+  i18n: {
+    currency: { zh: "DHS", en: "AED", ar: "درهم" },
+    herb: { zh: "草药", en: "Herb", ar: "عشبة" },
+    patent: { zh: "中成药", en: "Patent medicine", ar: "دواء جاهز" },
+    unitPrice: { zh: "单价", en: "Unit price", ar: "سعر الوحدة" },
+    qty: { zh: "数量", en: "Qty", ar: "الكمية" },
+    subtotal: { zh: "小计", en: "Subtotal", ar: "المجموع الفرعي" },
+    total: { zh: "处方总价", en: "Prescription total", ar: "إجمالي الوصفة" },
+    items: { zh: "项", en: "items", ar: "أصناف" },
+  },
 };
 
 const els = {
@@ -15,9 +24,12 @@ const els = {
   tempBtn: document.getElementById("btn-temp"),
   grandTotal: document.getElementById("grand-total"),
   itemCount: document.getElementById("item-count"),
+  totalLabel: document.querySelector(".total-label"),
   dialog: document.getElementById("temp-dialog"),
   tempForm: document.getElementById("temp-form"),
   tempName: document.getElementById("temp-name"),
+  tempNameEn: document.getElementById("temp-name-en"),
+  tempNameAr: document.getElementById("temp-name-ar"),
   tempType: document.getElementById("temp-type"),
   tempPrice: document.getElementById("temp-price"),
   tempQty: document.getElementById("temp-qty"),
@@ -27,14 +39,29 @@ const els = {
 
 function money(n) {
   const value = Number.isFinite(n) ? n : 0;
-  return value.toLocaleString("zh-CN", {
+  return value.toLocaleString("en-AE", {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   });
 }
 
+function currencyText() {
+  const c = state.i18n.currency;
+  return `${c.zh} / ${c.en} · ${c.ar}`;
+}
+
 function typeLabel(type) {
-  return type === "patent" ? "中成药" : "草药";
+  const key = type === "patent" ? "patent" : "herb";
+  const t = state.i18n[key];
+  return `${t.zh} · ${t.en}`;
+}
+
+function unitParts(item) {
+  return {
+    zh: item.unit || (item.type === "patent" ? "盒" : "克"),
+    en: item.unitEn || (item.type === "patent" ? "box" : "g"),
+    ar: item.unitAr || (item.type === "patent" ? "علبة" : "غرام"),
+  };
 }
 
 function unitLabel(type, unit) {
@@ -56,9 +83,16 @@ function searchMedicines(query) {
   const starts = [];
   const includes = [];
   for (const med of state.medicines) {
+    const hay = [med.name, med.nameEn, med.nameAr]
+      .filter(Boolean)
+      .join(" ")
+      .toLowerCase();
     const name = med.name.toLowerCase();
-    if (name.startsWith(q)) starts.push(med);
-    else if (name.includes(q)) includes.push(med);
+    if (name.startsWith(q) || (med.nameEn || "").toLowerCase().startsWith(q)) {
+      starts.push(med);
+    } else if (hay.includes(q)) {
+      includes.push(med);
+    }
   }
   return [...starts, ...includes].slice(0, 12);
 }
@@ -77,6 +111,29 @@ function findByName(name) {
   return state.byName.get(String(name || "").trim());
 }
 
+function nameBlock(item) {
+  const en = item.nameEn && item.nameEn !== item.name ? item.nameEn : "";
+  const ar = item.nameAr && item.nameAr !== item.name ? item.nameAr : "";
+  return `
+    <p class="rx-name">
+      ${escapeHtml(item.name)}
+      <span class="badge ${item.type === "patent" ? "badge-patent" : "badge-herb"}">${escapeHtml(
+        typeLabel(item.type)
+      )}</span>
+      ${item.temp ? '<span class="badge badge-temp">临时 · Temp</span>' : ""}
+    </p>
+    ${en ? `<p class="rx-name-en">${escapeHtml(en)}</p>` : ""}
+    ${ar ? `<p class="rx-name-ar" lang="ar" dir="rtl">${escapeHtml(ar)}</p>` : ""}
+  `;
+}
+
+function priceLine(amount) {
+  const c = state.i18n.currency;
+  return `${money(amount)} <span class="cur">${escapeHtml(c.zh)}</span> <span class="cur-sub">/ ${escapeHtml(
+    c.en
+  )} · ${escapeHtml(c.ar)}</span>`;
+}
+
 function addMedicine(med, qty = med.type === "patent" ? 1 : 10) {
   const existing = state.items.find(
     (item) => !item.temp && item.name === med.name && item.type === med.type
@@ -87,8 +144,12 @@ function addMedicine(med, qty = med.type === "patent" ? 1 : 10) {
     state.items.push({
       id: crypto.randomUUID(),
       name: med.name,
+      nameEn: med.nameEn || "",
+      nameAr: med.nameAr || "",
       type: med.type,
       unit: unitLabel(med.type, med.unit),
+      unitEn: med.unitEn || (med.type === "patent" ? "box" : "g"),
+      unitAr: med.unitAr || (med.type === "patent" ? "علبة" : "غرام"),
       price: Number(med.price),
       qty: roundQty(qty),
       temp: false,
@@ -99,12 +160,16 @@ function addMedicine(med, qty = med.type === "patent" ? 1 : 10) {
   render();
 }
 
-function addTemp({ name, type, price, qty }) {
+function addTemp({ name, nameEn, nameAr, type, price, qty }) {
   state.items.push({
     id: crypto.randomUUID(),
     name: name.trim(),
+    nameEn: (nameEn || "").trim(),
+    nameAr: (nameAr || "").trim(),
     type,
     unit: unitLabel(type),
+    unitEn: type === "patent" ? "box" : "g",
+    unitAr: type === "patent" ? "علبة" : "غرام",
     price: Number(price),
     qty: roundQty(qty),
     temp: true,
@@ -136,6 +201,8 @@ function renderSuggest(list) {
   els.suggest.innerHTML = list
     .map((med, index) => {
       const rel = relationText(med);
+      const unit = unitParts(med);
+      const en = med.nameEn && med.nameEn !== med.name ? med.nameEn : "";
       return `
         <li role="option">
           <button type="button" data-name="${escapeAttr(med.name)}" aria-selected="${
@@ -143,9 +210,10 @@ function renderSuggest(list) {
           }">
             <div class="suggest-main">
               <span>${escapeHtml(med.name)}</span>
-              <span>${money(med.price)} / ${escapeHtml(unitLabel(med.type, med.unit))}</span>
+              <span>${money(med.price)} / ${escapeHtml(unit.zh)} (${escapeHtml(unit.en)})</span>
             </div>
-            <div class="suggest-meta">${typeLabel(med.type)}</div>
+            ${en ? `<div class="suggest-en">${escapeHtml(en)}</div>` : ""}
+            <div class="suggest-meta">${escapeHtml(typeLabel(med.type))}</div>
             ${rel ? `<div class="suggest-rel">${escapeHtml(rel)}</div>` : ""}
           </button>
         </li>
@@ -160,9 +228,10 @@ function render() {
   els.rxList.hidden = !hasItems;
   els.clear.hidden = !hasItems;
 
+  const t = state.i18n;
+
   els.rxList.innerHTML = state.items
     .map((item) => {
-      const rel = relationText(item);
       const relatedNames =
         item.type === "herb" ? item.relatedPatents || [] : item.contains || [];
       const relHtml = relatedNames.length
@@ -182,26 +251,27 @@ function render() {
           ? `相关成药：${relHtml}`
           : item.type === "patent" && relatedNames.length
             ? `已知含：${relHtml}`
-            : rel
-              ? escapeHtml(rel)
-              : "";
+            : "";
+
+      const unit = unitParts(item);
 
       return `
         <article class="rx-item ${item.temp ? "is-temp" : ""}" data-id="${item.id}">
           <div class="rx-top">
-            <p class="rx-name">
-              ${escapeHtml(item.name)}
-              <span class="badge ${item.type === "patent" ? "badge-patent" : "badge-herb"}">${typeLabel(
-                item.type
-              )}</span>
-              ${item.temp ? '<span class="badge badge-temp">临时</span>' : ""}
-            </p>
+            <div class="rx-title">
+              ${nameBlock(item)}
+            </div>
             <button type="button" class="rx-remove" data-remove="${item.id}">删除</button>
           </div>
           ${relLine ? `<p class="rx-rel">${relLine}</p>` : ""}
           <div class="rx-controls">
             <div class="ctrl">
-              <label>数量（${escapeHtml(item.unit)}）</label>
+              <label>
+                ${escapeHtml(t.qty.zh)}（${escapeHtml(unit.zh)}）
+                <span class="label-i18n">${escapeHtml(t.qty.en)} (${escapeHtml(unit.en)}) · <span lang="ar" dir="rtl">${escapeHtml(
+                  t.qty.ar
+                )} (${escapeHtml(unit.ar)})</span></span>
+              </label>
               <div class="qty-row">
                 <button type="button" class="qty-btn" data-delta="-1" data-id="${item.id}" aria-label="减少">−</button>
                 <input type="number" min="0" step="0.1" value="${item.qty}" data-qty="${item.id}" />
@@ -209,14 +279,24 @@ function render() {
               </div>
             </div>
             <div class="ctrl">
-              <label>单价（DHS / ${escapeHtml(item.unit)}）</label>
+              <label>
+                ${escapeHtml(t.unitPrice.zh)}（${escapeHtml(t.currency.zh)} / ${escapeHtml(unit.zh)}）
+                <span class="label-i18n">${escapeHtml(t.unitPrice.en)} · <span lang="ar" dir="rtl">${escapeHtml(
+                  t.unitPrice.ar
+                )}</span></span>
+              </label>
               <input type="number" min="0" step="0.01" value="${item.price}" data-price="${item.id}" ${
                 item.temp ? "" : "readonly"
               } />
             </div>
             <div class="rx-subtotal">
-              <label style="display:block;color:var(--muted);font-size:0.75rem;font-weight:400;margin-bottom:0.25rem">小计</label>
-              ${money(lineTotal(item))} DHS
+              <label>
+                ${escapeHtml(t.subtotal.zh)}
+                <span class="label-i18n">${escapeHtml(t.subtotal.en)} · <span lang="ar" dir="rtl">${escapeHtml(
+                  t.subtotal.ar
+                )}</span></span>
+              </label>
+              <div class="price-tri">${priceLine(lineTotal(item))}</div>
             </div>
           </div>
         </article>
@@ -225,8 +305,16 @@ function render() {
     .join("");
 
   const total = state.items.reduce((sum, item) => sum + lineTotal(item), 0);
-  els.grandTotal.innerHTML = `${money(total)} <span>${currency}</span>`;
-  els.itemCount.textContent = `${state.items.length} 项`;
+  if (els.totalLabel) {
+    els.totalLabel.innerHTML = `
+      ${escapeHtml(t.total.zh)}
+      <span class="total-i18n">${escapeHtml(t.total.en)} · <span lang="ar" dir="rtl">${escapeHtml(
+        t.total.ar
+      )}</span></span>
+    `;
+  }
+  els.grandTotal.innerHTML = priceLine(total);
+  els.itemCount.textContent = `${state.items.length} ${t.items.zh} · ${state.items.length} ${t.items.en}`;
 }
 
 function escapeHtml(text) {
@@ -243,7 +331,9 @@ function escapeAttr(text) {
 
 function updateTempQtyLabel() {
   els.tempQtyLabel.textContent =
-    els.tempType.value === "patent" ? "数量（盒）" : "数量（克）";
+    els.tempType.value === "patent"
+      ? "数量（盒） / Qty (box)"
+      : "数量（克） / Qty (g)";
 }
 
 function bindEvents() {
@@ -313,8 +403,7 @@ function bindEvents() {
     if (deltaBtn) {
       const item = state.items.find((row) => row.id === deltaBtn.dataset.id);
       if (!item) return;
-      const step = item.type === "patent" ? 1 : 1;
-      const next = roundQty(item.qty + Number(deltaBtn.dataset.delta) * step);
+      const next = roundQty(item.qty + Number(deltaBtn.dataset.delta));
       item.qty = Math.max(0, next);
       render();
     }
@@ -362,11 +451,13 @@ function bindEvents() {
   els.tempForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const name = els.tempName.value.trim();
+    const nameEn = els.tempNameEn?.value.trim() || "";
+    const nameAr = els.tempNameAr?.value.trim() || "";
     const type = els.tempType.value;
     const price = Number(els.tempPrice.value);
     const qty = Number(els.tempQty.value);
     if (!name || !(price >= 0) || !(qty >= 0)) return;
-    addTemp({ name, type, price, qty });
+    addTemp({ name, nameEn, nameAr, type, price, qty });
     els.dialog.close();
   });
 }
@@ -381,6 +472,8 @@ async function init() {
     const data = await res.json();
     state.medicines = data.medicines || [];
     state.byName = new Map(state.medicines.map((med) => [med.name, med]));
+    if (data.i18n) state.i18n = { ...state.i18n, ...data.i18n };
+    render();
   } catch (error) {
     els.empty.textContent =
       "药品数据加载失败。若在本地打开，请使用本地服务器或部署到 GitHub Pages。";

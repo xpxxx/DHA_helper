@@ -14,6 +14,7 @@
   --radius: 18px;
   --font-sans: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
   --font-serif: "Noto Serif SC", "Songti SC", serif;
+  --font-ar: "Noto Naskh Arabic", "Geeza Pro", "Traditional Arabic", serif;
 }
 
 * {
@@ -65,6 +66,12 @@ body {
   margin: 0.55rem 0 0;
   color: var(--muted);
   line-height: 1.5;
+}
+
+.subtitle-i18n {
+  margin: 0.35rem 0 0;
+  color: var(--accent);
+  font-size: 0.86rem;
 }
 
 .panel {
@@ -167,6 +174,13 @@ select:focus {
   font-weight: 500;
 }
 
+.suggest-en {
+  margin-top: 0.15rem;
+  color: var(--ink);
+  font-size: 0.84rem;
+  opacity: 0.85;
+}
+
 .suggest-meta {
   margin-top: 0.2rem;
   color: var(--muted);
@@ -250,6 +264,53 @@ select:focus {
   margin: 0;
   font-weight: 700;
   font-size: 1.02rem;
+}
+
+.rx-name-en {
+  margin: 0.2rem 0 0;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.88;
+}
+
+.rx-name-ar {
+  margin: 0.15rem 0 0;
+  color: var(--muted);
+  font-family: var(--font-ar);
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.label-i18n {
+  display: block;
+  margin-top: 0.12rem;
+  font-size: 0.7rem;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+.label-i18n [lang="ar"],
+.rx-name-ar,
+.total-i18n [lang="ar"] {
+  font-family: var(--font-ar);
+}
+
+.price-tri {
+  font-variant-numeric: tabular-nums;
+}
+
+.price-tri .cur {
+  font-weight: 700;
+}
+
+.price-tri .cur-sub {
+  display: inline-block;
+  margin-left: 0.15rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 500;
 }
 
 .badge {
@@ -337,7 +398,15 @@ select:focus {
   text-align: right;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
-  padding-bottom: 0.45rem;
+  padding-bottom: 0.2rem;
+}
+
+.rx-subtotal label {
+  display: block;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
 }
 
 .total-bar {
@@ -363,6 +432,14 @@ select:focus {
   opacity: 0.85;
 }
 
+.total-i18n {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.72rem;
+  opacity: 0.75;
+  font-weight: 400;
+}
+
 .item-count {
   margin: 0.15rem 0 0;
   font-size: 0.8rem;
@@ -372,15 +449,25 @@ select:focus {
 .grand-total {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: clamp(1.4rem, 4vw, 1.8rem);
+  font-size: clamp(1.25rem, 3.6vw, 1.65rem);
   font-variant-numeric: tabular-nums;
+  text-align: right;
 }
 
-.grand-total span {
+.grand-total .cur {
   font-family: var(--font-sans);
   font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.grand-total .cur-sub {
+  display: block;
+  margin-top: 0.15rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
   font-weight: 500;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .dialog {

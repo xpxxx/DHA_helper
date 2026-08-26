@@ -1,0 +1,842 @@
+{
+  "三棱": {
+    "en": "Sparganium Rhizome",
+    "ar": "جذمور السبرغانيوم"
+  },
+  "丹参": {
+    "en": "Salvia miltiorrhiza",
+    "ar": "سالفيا ميلتيور"
+  },
+  "乌梅": {
+    "en": "Prunus Mume",
+    "ar": "أوم"
+  },
+  "云南白药胶囊": {
+    "en": "Yunnan Baiyao Capsule",
+    "ar": "كبسولة يونان باياو"
+  },
+  "五倍子": {
+    "en": "Galla Chinensis",
+    "ar": "الخماسي"
+  },
+  "五味子": {
+    "en": "Schisandra Chinensis",
+    "ar": "شيساندرا تشيننز"
+  },
+  "京都念慈菴川贝枇杷膏": {
+    "en": "Kyoto Nenci Yingchuan Bayi Phoenix Paste",
+    "ar": "كيوتو نينسي ينغشوان بايي معجون العنقاء"
+  },
+  "人参归脾丸": {
+    "en": "Ginseng Returning Spleen Pills",
+    "ar": "حبوب طحال الجينسنغ العائدة"
+  },
+  "仙鹤草": {
+    "en": "Agrimonia Pilosa",
+    "ar": "عشب الرافعة"
+  },
+  "伸筋草": {
+    "en": "Herba Lycopodii",
+    "ar": "تقوية العشب"
+  },
+  "僵蚕": {
+    "en": "Bombyx Batryticatus",
+    "ar": "بومبيكس موري"
+  },
+  "党参": {
+    "en": "Radix Codonopsis",
+    "ar": "حفلة الجينسنغ"
+  },
+  "六味地黄丸": {
+    "en": "Liu Wei Di Huang Wan",
+    "ar": "ليو وي دي هوانغ وان"
+  },
+  "决明子": {
+    "en": "Semen Cassiae",
+    "ar": "كاسيدي"
+  },
+  "制首乌": {
+    "en": "Polygonum multiflor",
+    "ar": "نبات البوليغونوم متعدد الأزهار"
+  },
+  "加味逍遥丸": {
+    "en": "Jia Wei Xiao Yao Wan",
+    "ar": "جيا وي شياو ياو وان"
+  },
+  "化毒丹（丸）": {
+    "en": "Transforming Poison Pill",
+    "ar": "تحويل حبوب السموم"
+  },
+  "北柴胡": {
+    "en": "Chinese Thoroughwax (Bupleurum Chinense)",
+    "ar": "الشمع الصيني الشامل (Bupleurum Chinense)"
+  },
+  "厚朴": {
+    "en": "Cortex Magnoliae Officinalis",
+    "ar": "Cortex Magnoliae Officinalis"
+  },
+  "参苓白术丸": {
+    "en": "Shenling Baizhu Wan",
+    "ar": "شينلينغ بيزو وان"
+  },
+  "合欢皮": {
+    "en": "Cortex Albiziae",
+    "ar": "قشرة ألبيزيا"
+  },
+  "同仁乌鸡白凤丸": {
+    "en": "Tongren Wuji Baifeng Wan",
+    "ar": "تونغرين ووجي بايفنغ وان"
+  },
+  "吴茱萸": {
+    "en": "Fructus Evodiae",
+    "ar": "فركتوس إيفودياي"
+  },
+  "地肤子": {
+    "en": "Fructus Kochiae",
+    "ar": "فركتوس كوتشياي"
+  },
+  "地骨皮": {
+    "en": "Cortex Lycii",
+    "ar": "Cortex Lycii"
+  },
+  "坤宝丸": {
+    "en": "Kunbao Wan",
+    "ar": "كونباو وان"
+  },
+  "复方丹参滴": {
+    "en": "Compound Danshen Dripping Pills",
+    "ar": "حبوب دانشن المركبة"
+  },
+  "复方板蓝根颗粒": {
+    "en": "Compound Banlangen Granules",
+    "ar": "حبيبات بانلانجن المركبة"
+  },
+  "复方草珊瑚含片": {
+    "en": "Composite grass coral lozenges",
+    "ar": "معينات مرجانية عشبية مركبة"
+  },
+  "夜交藤": {
+    "en": "Tuber Fleeceflower Stem (Caulis Polygoni Multiflori)",
+    "ar": "جذع درنات زهرة الصوف (Caulis Polygoni Multiflori)"
+  },
+  "大枣": {
+    "en": "Ziziphus Jujubae",
+    "ar": "زيزيفوس جوجوباي"
+  },
+  "大黄": {
+    "en": "Rheum Officinale",
+    "ar": "Rheum Officinale"
+  },
+  "天花粉": {
+    "en": "Radix Trichosanthis",
+    "ar": "Radix Trichosanthis"
+  },
+  "天麻": {
+    "en": "Gastrodiae Elata",
+    "ar": "Gastrodiae Elata"
+  },
+  "天麻头痛片": {
+    "en": "Natural Headache Relief Tablets (Tian Ma Tou Tong Pills)",
+    "ar": "أقراص تخفيف الصداع الطبيعية (حبوب تيان ما تو تونغ)"
+  },
+  "女贞子": {
+    "en": "Fructus Ligustri Lucidi",
+    "ar": "فركتوس ليغوستري لوسيدي"
+  },
+  "妙医抑菌乳膏": {
+    "en": "Miao Yi Antibacterial Cream",
+    "ar": "كريم مياو يي المضاد للبكتيريا"
+  },
+  "姜半夏": {
+    "en": "Processed Pinellia Tuber with Ginger (Rhizoma Pinelliae Praeparatum)",
+    "ar": "درنة بينيليا المعالجة بالزنجبيل (Rhizoma Pinelliae Praeparatum)"
+  },
+  "威灵仙": {
+    "en": "Radix et Rhizoma Clematidis",
+    "ar": "Radix et Rhizoma Clematidis"
+  },
+  "射干": {
+    "en": "Belamcanda Chinensis",
+    "ar": "بيلامكاندا تشينينسيس"
+  },
+  "小柴胡颗粒": {
+    "en": "Xiaochaihu Granules",
+    "ar": "حبيبات شياوشيهو"
+  },
+  "山药": {
+    "en": "Dioscorea Opposita",
+    "ar": "ديوسقوريا متعاكسة"
+  },
+  "山萸肉": {
+    "en": "Asiatic Cornelian Cherry Fruit (Corni Fructus)",
+    "ar": "فاكهة كرز كورنيلي آسيوي (فركتوس كورني)"
+  },
+  "川木通": {
+    "en": "Caulis Clematidis Armandii",
+    "ar": "Caulis Clematidis Armandii"
+  },
+  "川牛膝": {
+    "en": "Medicinal Cyathula officinalis Root (Cyathulae Radix)",
+    "ar": "الجذر المخزني (Cyathulae Radix)"
+  },
+  "川石斛": {
+    "en": "Dendrobium officinale",
+    "ar": "Dendrobium officinale"
+  },
+  "川穹": {
+    "en": "Chuanxiong Rhizome",
+    "ar": "جذمور تشوانشيونغ"
+  },
+  "川贝母": {
+    "en": "Bulbus Fritillariae Cirrhosae",
+    "ar": "بصلة فريتيلاريا سيرهوساي"
+  },
+  "巴戟天": {
+    "en": "Medicinal Indianmulberry Root (Morindae Officinalis Radix)",
+    "ar": "جذور التوت الهندي الطبية (Morindae Officinalis Radix)"
+  },
+  "干姜": {
+    "en": "Rhizoma Zingiberis",
+    "ar": "Rhizoma Zingiberis"
+  },
+  "广防已": {
+    "en": "Fangji Root",
+    "ar": "جذر فانغجي"
+  },
+  "延胡索": {
+    "en": "Corydalis Yanhusuo",
+    "ar": "Corydalis Yanhusuo"
+  },
+  "当归": {
+    "en": "Angelica sinensis",
+    "ar": "حشيشة الملاك, عشب عطري معمر يتم استخدامه في الطب الصيني التقليدي كعلاج للأعراض الحيضية والاضطرابات النسائية الاخرى"
+  },
+  "急支糖浆": {
+    "en": "Ji Zhi Tang Jiang",
+    "ar": "جي تشي تانغ جيانغ"
+  },
+  "新复方芦荟胶囊": {
+    "en": "New Compound Aloe Vera Capsules",
+    "ar": "كبسولات الألوة فيرا المركبة الجديدة"
+  },
+  "旋覆花": {
+    "en": "Inula Japonica",
+    "ar": "إينولا جابونيكا"
+  },
+  "木瓜": {
+    "en": "Papaya",
+    "ar": "بابايا"
+  },
+  "板蓝根": {
+    "en": "Radix Isatidis",
+    "ar": "Radix Isatidis"
+  },
+  "枣仁安神胶囊": {
+    "en": "Zaoren Anshen Capsule",
+    "ar": "كبسولة زورين أنشين"
+  },
+  "枳壳": {
+    "en": "Fructus Aurantii",
+    "ar": "فركتوس أورانتي"
+  },
+  "枳实": {
+    "en": "Fructus Aurantii Immaturus",
+    "ar": "Fructus Aurantii Immaturus"
+  },
+  "枸杞子": {
+    "en": "Fructus Lycii",
+    "ar": "فركتوس ليسي"
+  },
+  "柏子仁": {
+    "en": "Semen Platycladi",
+    "ar": "السائل المنوي Platycladi"
+  },
+  "栀子": {
+    "en": "Gardenia Jasminoides",
+    "ar": "غاردينيا ياسمينويدس"
+  },
+  "栀子金花丸": {
+    "en": "Zhizijinhua pill",
+    "ar": "حبوب منع الحمل Zhizijinhua"
+  },
+  "桂枝": {
+    "en": "Ramulus Cinnamomi",
+    "ar": "رامولوس سينامومي"
+  },
+  "桂枝茯苓丸": {
+    "en": "Gui Zhi Fu Ling Wan",
+    "ar": "Gui Zhi Fu Ling Wan"
+  },
+  "桑叶": {
+    "en": "Folium Mori",
+    "ar": "فوليوم موري"
+  },
+  "桑葚": {
+    "en": "Mulberry",
+    "ar": "توت"
+  },
+  "桔梗": {
+    "en": "Platycodon Grandiflorum",
+    "ar": "بلاتيكودون كبير الأزهار"
+  },
+  "槐米": {
+    "en": "Sophora japon",
+    "ar": "Sophora japon"
+  },
+  "槐花": {
+    "en": "Flos Sophorae",
+    "ar": "فلوس سوفوراي"
+  },
+  "款冬花": {
+    "en": "Tussilago Farfara",
+    "ar": "Tussilago Farfara"
+  },
+  "正红花油": {
+    "en": "Red Flower Oil",
+    "ar": "ريد فلور"
+  },
+  "气滞胃痛颗粒": {
+    "en": "Qizhi Weitong Granules",
+    "ar": "حبيبات Qizhi Weitong"
+  },
+  "水蛭（动物）": {
+    "en": "leech (animal-derived)",
+    "ar": "علقة, سلعة"
+  },
+  "法半夏": {
+    "en": "Rhizoma Pinelliae Praeparatum",
+    "ar": "شاطئ Rhizoma Pinelliae Praeparatum"
+  },
+  "泽泻": {
+    "en": "Alisma Orientale",
+    "ar": "Alisma Orientale"
+  },
+  "浙贝母": {
+    "en": "Fritillaria Thunbergii",
+    "ar": "شاطئ Fritillaria Thunbergii"
+  },
+  "浮小麦": {
+    "en": "Fructus Tritici Levis",
+    "ar": "فركتوس تريتيسي ليفيس"
+  },
+  "海金沙": {
+    "en": "Haijinsha",
+    "ar": "هايجينشا"
+  },
+  "消炎止咳片": {
+    "en": "Anti-Inflammatory & Cough Tablets",
+    "ar": "أقراص مضادة للالتهابات والسعال"
+  },
+  "淡竹叶": {
+    "en": "Lophatherum Herb (Lophatheri Herba)",
+    "ar": "Lophatherum Herb (Lophatheri Herba)"
+  },
+  "淡豆豉": {
+    "en": "Semen Sojae Preparatum",
+    "ar": "السائل المنوي Sojae Prepatum"
+  },
+  "淫羊藿": {
+    "en": "Herba Epimedii",
+    "ar": "هيربا إبيميدي"
+  },
+  "清脑降压片": {
+    "en": "Qing Nao Jiang Ya Pian",
+    "ar": "تشينغ ناو جيانغ يا بيان"
+  },
+  "滑石": {
+    "en": "Talc",
+    "ar": "التلك"
+  },
+  "火麻仁": {
+    "en": "Fructus Cannabis",
+    "ar": "فركتوس القنب"
+  },
+  "炒山楂": {
+    "en": "Fried hawthorn",
+    "ar": "زعرور مقلي"
+  },
+  "炒杜仲": {
+    "en": "Stir-fried eucommia",
+    "ar": "أوكوميا مقلية"
+  },
+  "炒枣仁": {
+    "en": "Stir-fried jujube nuts",
+    "ar": "مكسرات العناب المقلية"
+  },
+  "炒白扁豆": {
+    "en": "Stir-fried white lentils",
+    "ar": "عدس أبيض مقلي"
+  },
+  "炒神曲": {
+    "en": "Fried Divine Comedy",
+    "ar": "كوميديا إلهية مقلية"
+  },
+  "炒芡实": {
+    "en": "Stir-fried fruits",
+    "ar": "فواكه مقلية"
+  },
+  "炙甘草": {
+    "en": "Radix et Rhizoma Glycyrrhizae Preparata cum Melle",
+    "ar": "راديكس وجيزوما جليسيرريزاي بريبريباتا مع ميلي"
+  },
+  "炙黄芩": {
+    "en": "Scutellaria baicalensis",
+    "ar": "Scutellaria baicalensis"
+  },
+  "烧瓦楞子": {
+    "en": "Burned corrugated",
+    "ar": "كرتون مموج محروق"
+  },
+  "煅牡蛎（动物）": {
+    "en": "Calcined Common Oyster Shell (Ostreae Concha), (animal-derived)",
+    "ar": "قشرة المحار المشتركة المكلس (المحارة المحارية)،"
+  },
+  "煅禹余粮": {
+    "en": "Calcined Yu surplus grain",
+    "ar": "فائض حبوب اليو المكلس"
+  },
+  "熟地黄": {
+    "en": "Radix Rehmanniae Praeparata",
+    "ar": "Radix Rehmanniae Praeparata"
+  },
+  "燀山桃仁（chan）": {
+    "en": "Blanched Peach Kernel",
+    "ar": "نواة الخوخ المسلوقة"
+  },
+  "燀苦杏仁": {
+    "en": "Blanched Bitter Apricot Kernel",
+    "ar": "بذرة المشمش المرة المسلوقة"
+  },
+  "牛膝": {
+    "en": "Twotooth Achyranthes Root (Achyranthis Bidentatae Radix)",
+    "ar": "اثنين من جذور Achyranthes (Achyranthis Bidentatae Radix)"
+  },
+  "牛蒡子": {
+    "en": "Fructus Arctii",
+    "ar": "فركتوس أركتي"
+  },
+  "牛黄解毒丸": {
+    "en": "NiuHuangJieDu Pills",
+    "ar": "حبوب منع الحمل NiuHuangJieDu"
+  },
+  "牡丹皮": {
+    "en": "Cortex Moutan",
+    "ar": "Cortex Moutan"
+  },
+  "独活": {
+    "en": "Heracleum",
+    "ar": "هرقلية"
+  },
+  "独活寄生丸": {
+    "en": "Solitary Parasitic Pills",
+    "ar": "حبوب منع الحمل الطفيلية الانفرادية"
+  },
+  "猪苓": {
+    "en": "Grifola",
+    "ar": "جريفولا"
+  },
+  "玄参": {
+    "en": "Scrophularia Ningpoensis",
+    "ar": "Scrophularia Ningpoensis"
+  },
+  "玫瑰花": {
+    "en": "Flos Rosae Rugosae",
+    "ar": "Flos Rosae Rugosae"
+  },
+  "瓜蒌": {
+    "en": "Fructus Trichosanthis",
+    "ar": "فركتوس تريكوسانثيس"
+  },
+  "甘草片": {
+    "en": "Liquorice Tablets",
+    "ar": "أقراص عرق السوس"
+  },
+  "生地黄": {
+    "en": "Radix Rehmanniae",
+    "ar": "Radix Rehmanniae"
+  },
+  "生牡蛎": {
+    "en": "Raw Oyster",
+    "ar": "المحار الخام"
+  },
+  "生白术": {
+    "en": "Largehead Atractylodes Rhizome (Atractylodis Macrocephalae Rhizoma)",
+    "ar": "جذمور أتراكتيلوديس كبير الرأس (Atractylodis Macrocephalae Rhizoma)"
+  },
+  "生百部": {
+    "en": "Sang-hyakubu",
+    "ar": "سانغ ياكوبو"
+  },
+  "生薏苡仁": {
+    "en": "Raw coix seeds",
+    "ar": "بذور الكوكس الخام"
+  },
+  "生麦芽": {
+    "en": "Germinated Barley (Hordei Germinatus Fructus)",
+    "ar": "الشعير المنبت (Hordei Germinatus Fructus)"
+  },
+  "生龙骨": {
+    "en": "Raw keel",
+    "ar": "عارضة خام"
+  },
+  "番泻叶": {
+    "en": "Folium Sennae",
+    "ar": "فوليوم سيناي"
+  },
+  "白术": {
+    "en": "Atractylodes Macrocephala",
+    "ar": "أتراكتيلودس ماكروسيفالا"
+  },
+  "白芍": {
+    "en": "Radix Paeoniae Alba",
+    "ar": "Radix Paeoniae Alba"
+  },
+  "白芥子": {
+    "en": "Semen Sinapis",
+    "ar": "المني سينابيس"
+  },
+  "白芷": {
+    "en": "Radix Angelicae Formosanae",
+    "ar": "Radix Angelicae Formosanae"
+  },
+  "白薇": {
+    "en": "Radix et Rhizoma Cynanchi Atrati",
+    "ar": "Radix et Rhizoma Cynanchi Atrati"
+  },
+  "白鲜皮": {
+    "en": "Cortex Dictamni",
+    "ar": "Cortex Dictamni"
+  },
+  "百合": {
+    "en": "Bulbus Lilii",
+    "ar": "بصلة ليلي"
+  },
+  "皮肤病血毒丸": {
+    "en": "Dermatological blood poison pills",
+    "ar": "حبوب تسمم الدم الجلدية"
+  },
+  "益母草": {
+    "en": "Common Motherwort Herb (Leonuri Herba)",
+    "ar": "عشبة الأم الشائعة (ليونوري هيربا)"
+  },
+  "知母": {
+    "en": "Anemarrhena Asphodeloides",
+    "ar": "أنيمارينا أسفوديلويدس"
+  },
+  "石决明": {
+    "en": "Concha Haliotidis",
+    "ar": "Concha Haliotidis"
+  },
+  "石菖蒲": {
+    "en": "Acorus Tatarinowii",
+    "ar": "Acorus Tatarinowii"
+  },
+  "砂仁": {
+    "en": "Fructus Amomi",
+    "ar": "فركتوس أمومي"
+  },
+  "秦艽（jiao）": {
+    "en": "Largeleaf Gentian Root",
+    "ar": "جذر الجنطيانا"
+  },
+  "竹茹": {
+    "en": "Caulis Bambusae In Taeniam",
+    "ar": "شاطئ Caulis Bambusae In Taeniam"
+  },
+  "紫花地丁": {
+    "en": "Viola Yedoensis",
+    "ar": "فيولا يدونسيس"
+  },
+  "紫苏叶": {
+    "en": "Folium Perillae",
+    "ar": "فوليوم بيريلي"
+  },
+  "紫苑": {
+    "en": "Aster",
+    "ar": "أستر"
+  },
+  "红参": {
+    "en": "Radix et Rhizoma Ginseng Rubra",
+    "ar": "شاطئ Radix et Rhizoma Ginseng Rubra"
+  },
+  "红花": {
+    "en": "Carthamus tinctorius",
+    "ar": "قرطم عصفوري"
+  },
+  "细辛": {
+    "en": "Manchurian Wildginger Root (Asari Radix et Rhizoma)",
+    "ar": "جذور أساري راديكس وجذور منشوريا البرية (Asari Radix et Rhizoma)"
+  },
+  "续断": {
+    "en": "Dipsacus Asper",
+    "ar": "Dipsacus Asper"
+  },
+  "羌活": {
+    "en": "Rhizoma et Radix Notopterygii",
+    "ar": "Rhizoma et Radix Notopterygii"
+  },
+  "肉桂": {
+    "en": "Cinnamomum Cassia",
+    "ar": "سليخة"
+  },
+  "肉苁蓉": {
+    "en": "Cistanche Deserticola",
+    "ar": "Cistanche Deserticola"
+  },
+  "胃苏颗粒": {
+    "en": "Weisu Granules",
+    "ar": "حبيبات ويسو"
+  },
+  "胖大海": {
+    "en": "Sterculia Lychnophora",
+    "ar": "Sterculia Lychnophora"
+  },
+  "苍术": {
+    "en": "Rhizoma Atractylodis",
+    "ar": "Rhizoma Atractylodis"
+  },
+  "苍耳子": {
+    "en": "Fructus Xanthii",
+    "ar": "فركتوس زانثي"
+  },
+  "苦参": {
+    "en": "Sophora Flavescens",
+    "ar": "Sophora Flavescens"
+  },
+  "茜草（qian）": {
+    "en": "Madder Root",
+    "ar": "جذر الفوة"
+  },
+  "茯苓": {
+    "en": "Poria Cocos",
+    "ar": "بوريا كوكوس"
+  },
+  "荆芥": {
+    "en": "Schizonepeta Tenuifolia",
+    "ar": "Schizonepeta Tenuifolia"
+  },
+  "荷叶": {
+    "en": "Folium Nelumbinis",
+    "ar": "فوليوم نيلومبينيس"
+  },
+  "莱菔子": {
+    "en": "Semen Raphani",
+    "ar": "رافاني المني"
+  },
+  "莲芝消炎片": {
+    "en": "Lianzhi Xiaoyan Tablets",
+    "ar": "أقراص ليانزي المضادة للالتهاب"
+  },
+  "菊花": {
+    "en": "Chrysanthemum Morifolium",
+    "ar": "أقحوان موريفوليوم"
+  },
+  "菟丝子": {
+    "en": "Cuscuta Chinensis",
+    "ar": "Cuscuta Chinensis"
+  },
+  "萹蓄": {
+    "en": "Polygonum Aviculare",
+    "ar": "Polygonum Aviculare"
+  },
+  "葛根": {
+    "en": "Pueraria Lobata",
+    "ar": "بوريريا لوباتا"
+  },
+  "蒲公英": {
+    "en": "Dandelions",
+    "ar": "طرخشقون"
+  },
+  "薄荷": {
+    "en": "Herba Menthae Haplocalycis",
+    "ar": "Herba Menthae Haplocalycis"
+  },
+  "薏苡仁": {
+    "en": "Semen Coicis",
+    "ar": "السائل المنوي Coicis"
+  },
+  "薤白": {
+    "en": "Allium Macrostemon",
+    "ar": "ثوم ضخم الساق"
+  },
+  "藁本片": {
+    "en": "Straw Pieces",
+    "ar": "قطع القش"
+  },
+  "藿香": {
+    "en": "indian mint",
+    "ar": "نعناع هندي"
+  },
+  "藿香正气丸": {
+    "en": "Huo Xiang Zheng Qi Wan",
+    "ar": "هوه شيانغ تشنغ تشي وان"
+  },
+  "蛇床子": {
+    "en": "Fructus Cnidii",
+    "ar": "فركتوس سنيدي"
+  },
+  "蜜桑白皮": {
+    "en": "Miso bark",
+    "ar": "لحاء ميسو"
+  },
+  "蜜麻黄": {
+    "en": "Honey Ephedra",
+    "ar": "إفيدرا العسل"
+  },
+  "蝉衣（动物）": {
+    "en": "Chanyi (animal-derived)",
+    "ar": "شانيي"
+  },
+  "西洋参": {
+    "en": "American Ginseng",
+    "ar": "الجينسنغ الأمريكي 4"
+  },
+  "覆盆子": {
+    "en": "Rubus Chingii",
+    "ar": "روبوس جنجي"
+  },
+  "解郁安神颗粒": {
+    "en": "Jieyu Anshen Granule",
+    "ar": "Jieyu Anshen Granule"
+  },
+  "调经促孕丸": {
+    "en": "Tiaojing Cuyun Wan (Regulate Menstruation & Aid Pregnancy Pills)",
+    "ar": "حبوب تنظيم الدورة والمساعدة على الحمل"
+  },
+  "败酱草": {
+    "en": "Patrinia",
+    "ar": "Patrinia"
+  },
+  "赤小豆": {
+    "en": "Semen Phaseoli",
+    "ar": "طور السائل المنوي"
+  },
+  "赤芍": {
+    "en": "Radix Paeoniae Rubra",
+    "ar": "Radix Paeoniae Rubra"
+  },
+  "车前子": {
+    "en": "Semen Plantaginis",
+    "ar": "نباتات المني"
+  },
+  "辛夷花": {
+    "en": "Echinacea",
+    "ar": "خلاصة العشبة القنفذية (اكينيسيا)"
+  },
+  "远志": {
+    "en": "Radix Polygalae",
+    "ar": "Radix Polygalae"
+  },
+  "连翘": {
+    "en": "Forsythia Suspensa",
+    "ar": "فورسيتيا سوسبينزا   حيّة"
+  },
+  "郁金": {
+    "en": "Radix Curcumae",
+    "ar": "Radix Curcumae"
+  },
+  "醋乳香": {
+    "en": "Vinegar frankincense",
+    "ar": "اللبان بالخل"
+  },
+  "醋没药": {
+    "en": "Prepared Myrrh with vinegar (Myrrha)",
+    "ar": "إعداد المر بالخل (المر)"
+  },
+  "金匮肾气丸": {
+    "en": "Kidney-qi-tonifying Pills",
+    "ar": "حبوب كلى- تشي- تونيفينج"
+  },
+  "金钱草": {
+    "en": "Pecuniary grass",
+    "ar": "عشب مالي"
+  },
+  "金银花": {
+    "en": "Flos Lonicerae Japonicae",
+    "ar": "شاطئ Flos Lonicerae Japonicae"
+  },
+  "钩藤": {
+    "en": "Ramulus Uncariae Cum Uncis",
+    "ar": "الفرع الشحمي مع الشحوم"
+  },
+  "防风": {
+    "en": "Saposhnikovia Divaricata",
+    "ar": "سابوشنيكوفيا ديفاريكاتا"
+  },
+  "附子理中丸": {
+    "en": "Fu Zi Li Zhong Wan",
+    "ar": "فو زي لي تشونغ وان"
+  },
+  "陈皮": {
+    "en": "Dried Tangerine Peel (Pericarpium Citri Reticulatae)",
+    "ar": "قشر اليوسفي المجفف (Pericarpium Citri Reticulatae)"
+  },
+  "青皮": {
+    "en": "green skin",
+    "ar": "بشرة خضراء"
+  },
+  "颈康复颗粒": {
+    "en": "Neck Healing Granules",
+    "ar": "حبيبات شفاء الرقبة"
+  },
+  "香砂六君丸（仲景）": {
+    "en": "Xiang Sha Liu Jun Wan",
+    "ar": "شيانغ شا ليو جون وان"
+  },
+  "香附": {
+    "en": "Cyperus Rotundus",
+    "ar": "سعد مستدير"
+  },
+  "马齿笕": {
+    "en": "Purslane",
+    "ar": "رجلة"
+  },
+  "骨碎补": {
+    "en": "Drynaria Fortunei",
+    "ar": "درايناريا فورتوني"
+  },
+  "鱼腥草": {
+    "en": "Houttuynia Cordata",
+    "ar": "Houttuynia Cordata"
+  },
+  "鳖甲（动物）": {
+    "en": "Carapax Trionycis (animal-derived)",
+    "ar": "Carapax Trionycis"
+  },
+  "鸡内金（动物）": {
+    "en": "Endothelium Corneum Gigeriae Galli (animal-derived)",
+    "ar": "البطانة القرنية Gigeriae Galli"
+  },
+  "鸡血藤": {
+    "en": "Spatholobus Suberectus",
+    "ar": "الفص الفقاري تحت المستقيم"
+  },
+  "麦冬": {
+    "en": "Dwarf Lilyturf Tuber (Ophiopogonis Radix),",
+    "ar": "درنة ليليتورف القزمة (Ophiopogonis Radix)،"
+  },
+  "黄柏": {
+    "en": "Cortex Phellodendri Amurensis",
+    "ar": "Cortex Phellodendri Amurensis"
+  },
+  "黄芩片": {
+    "en": "Baical Skullcap Root (Scutellaria Baicalensis)",
+    "ar": "جذر بايكال سكالكاب (Scutellaria Baicalensis)"
+  },
+  "黄连片": {
+    "en": "Huanglian Tablets",
+    "ar": "أقراص هوانغليان"
+  },
+  "黑顺片": {
+    "en": "Heishun Tablets",
+    "ar": "أقراص هيشون"
+  },
+  "龙胆": {
+    "en": "Radix et Rhizoma Gentianae",
+    "ar": "الجذر والجذر الجنطيانى"
+  },
+  "龙胆泻肝丸": {
+    "en": "Longdan Xiegan Wan",
+    "ar": "لونجدان شيغان وان"
+  }
+}

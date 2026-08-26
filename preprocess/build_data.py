@@ -179,6 +179,17 @@ def main() -> None:
         for item in payload["skipped"]["patentPriceConflicts"]:
             print("  patent", item)
 
+    # 若已有译名缓存，重建目录后自动合并
+    i18n_path = ROOT / "data" / "name_i18n.json"
+    if i18n_path.exists():
+        import sys
+
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from build_translations import load_i18n, merge_into_medicines
+
+        merge_into_medicines(load_i18n())
+        print("Merged name_i18n.json into medicines.json")
+
 
 if __name__ == "__main__":
     main()

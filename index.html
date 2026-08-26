@@ -6,7 +6,7 @@
   <title>处方计价 · DHA Helper</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -15,6 +15,7 @@
       <p class="eyebrow">DHA Helper</p>
       <h1>处方计价</h1>
       <p class="subtitle">输入药名与用量，自动计算单价、小计与总价</p>
+      <p class="subtitle-i18n">Medicine names &amp; prices shown in Chinese · English · العربية</p>
     </header>
 
     <section class="panel search-panel" aria-label="添加药品">
@@ -49,7 +50,7 @@
         <p class="total-label">处方总价</p>
         <p id="item-count" class="item-count">0 项</p>
       </div>
-      <p id="grand-total" class="grand-total">0.00 <span>DHS</span></p>
+      <p id="grand-total" class="grand-total">0.00 <span class="cur">DHS</span></p>
     </section>
   </div>
 
@@ -57,18 +58,26 @@
     <form method="dialog" id="temp-form">
       <h3>添加临时药品</h3>
       <label>
-        药名
+        药名（中文）
         <input id="temp-name" type="text" required maxlength="40" placeholder="例如：某某草" />
+      </label>
+      <label>
+        English name（可选）
+        <input id="temp-name-en" type="text" maxlength="80" placeholder="Optional English name" />
+      </label>
+      <label>
+        الاسم بالعربية（可选）
+        <input id="temp-name-ar" type="text" maxlength="80" dir="rtl" lang="ar" placeholder="اختياري" />
       </label>
       <label>
         类型
         <select id="temp-type">
-          <option value="herb">草药（按克）</option>
-          <option value="patent">中成药（按盒）</option>
+          <option value="herb">草药（按克） / Herb (g)</option>
+          <option value="patent">中成药（按盒） / Patent (box)</option>
         </select>
       </label>
       <label>
-        临时单价（DHS）
+        临时单价（DHS / AED）
         <input id="temp-price" type="number" min="0" step="0.01" required placeholder="0.00" />
       </label>
       <label>
