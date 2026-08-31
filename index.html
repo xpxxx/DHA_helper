@@ -46,24 +46,26 @@
     </section>
 
     <section class="total-bar" aria-live="polite">
-      <div class="total-bar-left">
-        <div class="dose-control">
-          <label class="dose-label" for="dose-count">
-            剂数
-            <span class="label-i18n">Doses · <span lang="ar" dir="rtl">عدد الجرعات</span></span>
-          </label>
-          <div class="qty-row dose-row">
-            <button type="button" class="qty-btn dose-btn" data-dose-delta="-1" aria-label="减少剂数">−</button>
-            <input id="dose-count" type="number" min="1" step="1" value="1" inputmode="numeric" />
-            <button type="button" class="qty-btn dose-btn" data-dose-delta="1" aria-label="增加剂数">+</button>
-          </div>
+      <div class="total-bar-dose">
+        <label class="dose-label" for="dose-count">
+          剂数
+          <span class="label-i18n">Doses · <span lang="ar" dir="rtl">عدد الجرعات</span></span>
+        </label>
+        <div class="qty-row dose-row">
+          <button type="button" class="qty-btn dose-btn" data-dose-delta="-1" aria-label="减少剂数">−</button>
+          <input id="dose-count" type="number" min="1" step="1" value="1" inputmode="numeric" />
+          <button type="button" class="qty-btn dose-btn" data-dose-delta="1" aria-label="增加剂数">+</button>
         </div>
-        <p id="item-count" class="item-count">0 项</p>
-        <p id="per-dose-total" class="per-dose-total" hidden></p>
       </div>
-      <div class="total-bar-right">
-        <p class="total-label" id="total-label">处方总价</p>
-        <p id="grand-total" class="grand-total">0.00 <span class="cur">DHS</span></p>
+      <div class="total-bar-summary">
+        <div class="total-bar-left">
+          <p id="item-count" class="item-count">0 项</p>
+          <p id="per-dose-total" class="per-dose-total" hidden></p>
+        </div>
+        <div class="total-bar-right">
+          <p class="total-label" id="total-label">处方总价</p>
+          <p id="grand-total" class="grand-total">0.00 <span class="cur">DHS</span></p>
+        </div>
       </div>
     </section>
   </div>
