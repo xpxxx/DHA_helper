@@ -39,7 +39,7 @@ body {
 .page {
   width: min(720px, calc(100% - 2rem));
   margin: 0 auto;
-  padding: 2rem 0 7rem;
+  padding: 2rem 0 9.5rem;
 }
 
 .header {
@@ -417,13 +417,77 @@ select:focus {
   width: min(720px, calc(100% - 2rem));
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   gap: 1rem;
   padding: 0.95rem 1.15rem;
   border-radius: 16px;
   background: color-mix(in srgb, #20362c 92%, black);
   color: #f4f8f5;
   box-shadow: 0 12px 36px rgba(20, 35, 28, 0.28);
+}
+
+.total-bar-left,
+.total-bar-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.total-bar-right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.dose-control {
+  margin-bottom: 0.15rem;
+}
+
+.dose-label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.dose-label .label-i18n {
+  font-size: 0.68rem;
+  opacity: 0.75;
+}
+
+.dose-row {
+  gap: 0.35rem;
+}
+
+.dose-row input {
+  width: 3rem;
+  min-height: 2.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f4f8f5;
+  text-align: center;
+  font: inherit;
+}
+
+.dose-row .qty-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #f4f8f5;
+}
+
+.per-dose-total {
+  margin: 0.1rem 0 0;
+  font-size: 0.76rem;
+  opacity: 0.78;
+  line-height: 1.35;
+}
+
+.per-dose-i18n {
+  display: block;
+  margin-top: 0.08rem;
+  font-size: 0.68rem;
+  opacity: 0.85;
 }
 
 .total-label {
@@ -511,5 +575,17 @@ select:focus {
     grid-column: 1 / -1;
     text-align: left;
     padding-top: 0.2rem;
+  }
+
+  .total-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .total-bar-right {
+    align-items: flex-start;
+    text-align: left;
+    padding-top: 0.35rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
   }
 }

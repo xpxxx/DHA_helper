@@ -2,6 +2,7 @@ const state = {
   medicines: [],
   byName: new Map(),
   items: [],
+  doses: 1,
   activeSuggest: -1,
   i18n: {
     currency: { zh: "DHS", en: "AED", ar: "درهم" },
@@ -11,6 +12,9 @@ const state = {
     qty: { zh: "数量", en: "Qty", ar: "الكمية" },
     subtotal: { zh: "小计", en: "Subtotal", ar: "المجموع الفرعي" },
     total: { zh: "处方总价", en: "Prescription total", ar: "إجمالي الوصفة" },
+    perDose: { zh: "每剂", en: "Per dose", ar: "لكل جرعة" },
+    totalAll: { zh: "总价", en: "Total", ar: "الإجمالي" },
+    doses: { zh: "剂", en: "doses", ar: "جرعات" },
     items: { zh: "项", en: "items", ar: "أصناف" },
   },
 };
@@ -24,7 +28,11 @@ const els = {
   tempBtn: document.getElementById("btn-temp"),
   grandTotal: document.getElementById("grand-total"),
   itemCount: document.getElementById("item-count"),
-  totalLabel: document.querySelector(".total-label"),
+  totalLabel: document.getElementById("total-label"),
+  perDoseTotal: document.getElementById("per-dose-total"),
+  doseCount: document.getElementById("dose-count"),
+  doseMinus: document.getElementById("dose-minus"),
+  dosePlus: document.getElementById("dose-plus"),
   dialog: document.getElementById("temp-dialog"),
   tempForm: document.getElementById("temp-form"),
   tempName: document.getElementById("temp-name"),
@@ -183,8 +191,20 @@ function roundQty(n) {
   return Math.round(Number(n) * 1000) / 1000;
 }
 
+function roundDoses(n) {
+  return Math.max(1, Math.round(Number(n) || 1));
+}
+
 function lineTotal(item) {
   return (Number(item.price) || 0) * (Number(item.qty) || 0);
+}
+
+function perDoseTotal() {
+  return state.items.reduce((sum, item) => sum + lineTotal(item), 0);
+}
+
+function grandTotal() {
+  return perDoseTotal() * state.doses;
 }
 
 function renderSuggest(list) {
@@ -304,16 +324,52 @@ function render() {
     })
     .join("");
 
-  const total = state.items.reduce((sum, item) => sum + lineTotal(item), 0);
-  if (els.totalLabel) {
-    els.totalLabel.innerHTML = `
-      ${escapeHtml(t.total.zh)}
-      <span class="total-i18n">${escapeHtml(t.total.en)} · <span lang="ar" dir="rtl">${escapeHtml(
-        t.total.ar
-      )}</span></span>
-    `;
+  const oneDose = perDoseTotal();
+  const allDoses = grandTotal();
+
+  if (els.doseCount && Number(els.doseCount.value) !== state.doses) {
+    els.doseCount.value = String(state.doses);
   }
-  els.grandTotal.innerHTML = priceLine(total);
+
+  if (els.totalLabel) {
+    if (state.doses > 1) {
+      els.totalLabel.innerHTML = `
+        ${escapeHtml(t.totalAll.zh)}（${state.doses} ${escapeHtml(t.doses.zh)}）
+        <span class="total-i18n">${escapeHtml(t.totalAll.en)} (${state.doses} ${escapeHtml(
+          t.doses.en
+        )}) · <span lang="ar" dir="rtl">${escapeHtml(t.totalAll.ar)} (${state.doses} ${escapeHtml(
+          t.doses.ar
+        )})</span></span>
+      `;
+    } else {
+      els.totalLabel.innerHTML = `
+        ${escapeHtml(t.total.zh)}（1 ${escapeHtml(t.doses.zh)}）
+        <span class="total-i18n">${escapeHtml(t.total.en)} (1 ${escapeHtml(t.doses.en)}) · <span lang="ar" dir="rtl">${escapeHtml(
+          t.total.ar
+        )} (1 ${escapeHtml(t.doses.ar)})</span></span>
+      `;
+    }
+  }
+
+  els.grandTotal.innerHTML = priceLine(allDoses);
+
+  if (els.perDoseTotal) {
+    if (state.doses > 1 && state.items.length > 0) {
+      els.perDoseTotal.hidden = false;
+      els.perDoseTotal.innerHTML = `
+        ${escapeHtml(t.perDose.zh)}：${money(oneDose)} ${escapeHtml(t.currency.zh)}
+        <span class="per-dose-i18n">${escapeHtml(t.perDose.en)}: ${money(oneDose)} ${escapeHtml(
+          t.currency.en
+        )} · <span lang="ar" dir="rtl">${escapeHtml(t.perDose.ar)}: ${money(oneDose)} ${escapeHtml(
+          t.currency.ar
+        )}</span></span>
+      `;
+    } else {
+      els.perDoseTotal.hidden = true;
+      els.perDoseTotal.textContent = "";
+    }
+  }
+
   els.itemCount.textContent = `${state.items.length} ${t.items.zh} · ${state.items.length} ${t.items.en}`;
 }
 
@@ -431,6 +487,21 @@ function bindEvents() {
       state.items = [];
       render();
     }
+  });
+
+  els.doseMinus?.addEventListener("click", () => {
+    state.doses = roundDoses(state.doses - 1);
+    render();
+  });
+
+  els.dosePlus?.addEventListener("click", () => {
+    state.doses = roundDoses(state.doses + 1);
+    render();
+  });
+
+  els.doseCount?.addEventListener("change", (event) => {
+    state.doses = roundDoses(event.target.value);
+    render();
   });
 
   els.tempBtn.addEventListener("click", () => {
