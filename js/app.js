@@ -31,6 +31,7 @@ const els = {
   totalLabel: document.getElementById("total-label"),
   perDoseTotal: document.getElementById("per-dose-total"),
   totalBar: document.querySelector(".total-bar"),
+  searchPanel: document.querySelector(".search-panel"),
   doseCount: document.getElementById("dose-count"),
   dialog: document.getElementById("temp-dialog"),
   tempForm: document.getElementById("temp-form"),
@@ -136,9 +137,26 @@ function nameBlock(item) {
 
 function priceLine(amount) {
   const c = state.i18n.currency;
-  return `${money(amount)} <span class="cur">${escapeHtml(c.zh)}</span> <span class="cur-sub">/ ${escapeHtml(
+  return `${money(amount)} <span class="cur">${escapeHtml(c.zh)}</span><span class="cur-sub">/ ${escapeHtml(
     c.en
-  )} · ${escapeHtml(c.ar)}</span>`;
+  )}</span>`;
+}
+
+function updateSuggestMaxHeight() {
+  if (!els.suggest || !els.search || els.suggest.hidden) return;
+  const searchRect = els.search.getBoundingClientRect();
+  const barRect = els.totalBar?.getBoundingClientRect();
+  const bottomLimit = barRect ? barRect.top : window.innerHeight - 16;
+  const available = bottomLimit - searchRect.bottom - 12;
+  const max = Math.max(120, Math.min(320, available));
+  els.suggest.style.maxHeight = `${max}px`;
+}
+
+function setSuggestOpen(open) {
+  els.searchPanel?.classList.toggle("is-open", open);
+  if (open) {
+    updateSuggestMaxHeight();
+  }
 }
 
 function addMedicine(med, qty = med.type === "patent" ? 1 : 10) {
@@ -220,11 +238,13 @@ function renderSuggest(list) {
     els.suggest.innerHTML = "";
     els.search.setAttribute("aria-expanded", "false");
     state.activeSuggest = -1;
+    setSuggestOpen(false);
     return;
   }
 
   els.suggest.hidden = false;
   els.search.setAttribute("aria-expanded", "true");
+  setSuggestOpen(true);
   els.suggest.innerHTML = list
     .map((med, index) => {
       const rel = relationText(med);
@@ -247,6 +267,8 @@ function renderSuggest(list) {
       `;
     })
     .join("");
+
+  updateSuggestMaxHeight();
 }
 
 function render() {
@@ -349,11 +371,6 @@ function renderTotals() {
       els.perDoseTotal.hidden = false;
       els.perDoseTotal.innerHTML = `
         ${escapeHtml(t.perDose.zh)}（1 ${escapeHtml(t.doses.zh)}）：${money(oneDose)} ${escapeHtml(t.currency.zh)}
-        <span class="per-dose-i18n">${escapeHtml(t.perDose.en)}: ${money(oneDose)} ${escapeHtml(
-          t.currency.en
-        )} · <span lang="ar" dir="rtl">${escapeHtml(t.perDose.ar)}: ${money(oneDose)} ${escapeHtml(
-          t.currency.ar
-        )}</span></span>
       `;
     } else {
       els.perDoseTotal.hidden = true;
@@ -414,6 +431,15 @@ function bindEvents() {
     state.activeSuggest = -1;
     renderSuggest(searchMedicines(els.search.value));
   });
+
+  els.search.addEventListener("focus", () => {
+    if (els.search.value.trim()) {
+      renderSuggest(searchMedicines(els.search.value));
+    }
+  });
+
+  window.addEventListener("resize", updateSuggestMaxHeight);
+  window.visualViewport?.addEventListener("resize", updateSuggestMaxHeight);
 
   els.search.addEventListener("keydown", (event) => {
     const options = [...els.suggest.querySelectorAll("button")];

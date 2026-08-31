@@ -39,7 +39,7 @@ body {
 .page {
   width: min(720px, calc(100% - 2rem));
   margin: 0 auto;
-  padding: 2rem 0 11rem;
+  padding: 2rem 0 6.5rem;
 }
 
 .header {
@@ -106,8 +106,18 @@ body {
   font-weight: 500;
 }
 
+.search-panel {
+  position: relative;
+  z-index: 30;
+}
+
+.search-panel.is-open {
+  z-index: 120;
+}
+
 .search-wrap {
   position: relative;
+  z-index: 1;
 }
 
 input[type="search"],
@@ -131,19 +141,20 @@ select:focus {
 
 .suggest-list {
   position: absolute;
-  z-index: 20;
+  z-index: 130;
   left: 0;
   right: 0;
   top: calc(100% + 0.35rem);
   margin: 0;
   padding: 0.35rem;
   list-style: none;
-  max-height: 280px;
+  max-height: min(280px, calc(100dvh - 9rem));
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
   background: #fffefb;
   border: 1px solid var(--line);
   border-radius: 14px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 16px 40px rgba(31, 42, 36, 0.16);
 }
 
 .suggest-list li {
@@ -412,37 +423,59 @@ select:focus {
 .total-bar {
   position: fixed;
   left: 50%;
-  bottom: 1rem;
+  bottom: 0.65rem;
   transform: translateX(-50%);
-  width: min(720px, calc(100% - 2rem));
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 0.75rem;
-  padding: 0.95rem 1.15rem;
-  border-radius: 16px;
-  background: color-mix(in srgb, #20362c 92%, black);
+  width: min(720px, calc(100% - 1rem));
+  z-index: 50;
+  padding: 0.55rem 0.75rem;
+  border-radius: 14px;
+  background: color-mix(in srgb, #20362c 94%, black);
   color: #f4f8f5;
-  box-shadow: 0 12px 36px rgba(20, 35, 28, 0.28);
+  box-shadow: 0 8px 28px rgba(20, 35, 28, 0.22);
+}
+
+.total-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
 }
 
 .total-bar-dose {
-  padding-bottom: 0.7rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-shrink: 0;
+}
+
+.dose-label-inline {
+  font-size: 0.74rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.dose-label-sub {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 500;
+  opacity: 0.72;
 }
 
 .total-bar-summary {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+  flex: 1;
 }
 
 .total-bar-left,
 .total-bar-right {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.08rem;
   min-width: 0;
 }
 
@@ -452,39 +485,25 @@ select:focus {
   flex-shrink: 0;
 }
 
-.dose-label {
-  display: block;
-  margin-bottom: 0.45rem;
-  font-size: 0.8rem;
-  font-weight: 500;
-  opacity: 0.92;
-}
-
-.dose-label .label-i18n {
-  font-size: 0.7rem;
-  opacity: 0.75;
-}
-
 .dose-row {
   display: grid;
-  grid-template-columns: 2.85rem minmax(5.5rem, 8rem) 2.85rem;
-  gap: 0.55rem;
+  grid-template-columns: 2.15rem 3.25rem 2.15rem;
+  gap: 0.35rem;
   align-items: center;
-  max-width: 100%;
 }
 
 .dose-row input {
   width: 100%;
   min-width: 0;
-  min-height: 2.85rem;
-  padding: 0.35rem 0.5rem;
+  min-height: 2.35rem;
+  padding: 0.2rem 0.35rem;
   border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 12px;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.12);
   color: #f4f8f5;
   text-align: center;
   font: inherit;
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
 }
@@ -498,76 +517,69 @@ select:focus {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.18);
   color: #f4f8f5;
-  position: relative;
-  z-index: 2;
   cursor: pointer;
   touch-action: manipulation;
   flex-shrink: 0;
 }
 
 .dose-btn {
-  width: 2.85rem;
-  height: 2.85rem;
-  font-size: 1.1rem;
+  width: 2.15rem;
+  height: 2.35rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
 .per-dose-total {
-  margin: 0.1rem 0 0;
-  font-size: 0.76rem;
+  margin: 0;
+  font-size: 0.68rem;
   opacity: 0.78;
-  line-height: 1.35;
+  line-height: 1.25;
 }
 
 .per-dose-i18n {
-  display: block;
-  margin-top: 0.08rem;
-  font-size: 0.68rem;
-  opacity: 0.85;
+  display: none;
 }
 
 .total-label {
   margin: 0;
-  font-size: 0.85rem;
-  opacity: 0.85;
+  font-size: 0.72rem;
+  opacity: 0.82;
+  line-height: 1.2;
 }
 
 .total-i18n {
-  display: block;
-  margin-top: 0.15rem;
-  font-size: 0.72rem;
-  opacity: 0.75;
-  font-weight: 400;
+  display: none;
 }
 
 .item-count {
-  margin: 0.15rem 0 0;
-  font-size: 0.8rem;
-  opacity: 0.7;
+  margin: 0;
+  font-size: 0.68rem;
+  opacity: 0.68;
 }
 
 .grand-total {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: clamp(1.25rem, 3.6vw, 1.65rem);
+  font-size: clamp(1.05rem, 3.2vw, 1.35rem);
   font-variant-numeric: tabular-nums;
   text-align: right;
+  line-height: 1.15;
 }
 
 .grand-total .cur {
   font-family: var(--font-sans);
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 600;
   opacity: 0.9;
 }
 
 .grand-total .cur-sub {
-  display: block;
-  margin-top: 0.15rem;
+  display: inline;
+  margin-left: 0.2rem;
   font-family: var(--font-sans);
-  font-size: 0.72rem;
+  font-size: 0.62rem;
   font-weight: 500;
-  opacity: 0.7;
+  opacity: 0.65;
 }
 
 .dialog {
@@ -613,21 +625,21 @@ select:focus {
     padding-top: 0.2rem;
   }
 
-  .dose-row {
-    grid-template-columns: 2.75rem minmax(4.5rem, 1fr) 2.75rem;
-    width: 100%;
+  .page {
+    padding-bottom: 7rem;
+  }
+
+  .total-bar-inner {
+    flex-wrap: wrap;
+    align-items: flex-end;
   }
 
   .total-bar-summary {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.55rem;
+    flex: 1 1 100%;
+    justify-content: space-between;
   }
 
-  .total-bar-right {
-    align-items: flex-start;
-    text-align: left;
-    padding-top: 0.35rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  .dose-row {
+    grid-template-columns: 2rem 3rem 2rem;
   }
 }

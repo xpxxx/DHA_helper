@@ -44,16 +44,15 @@
       <div id="empty-state" class="empty-state">尚未添加药品</div>
       <div id="rx-list" class="rx-list" hidden></div>
     </section>
+  </div>
 
-    <section class="total-bar" aria-live="polite">
+  <section class="total-bar" aria-live="polite">
+    <div class="total-bar-inner">
       <div class="total-bar-dose">
-        <label class="dose-label" for="dose-count">
-          剂数
-          <span class="label-i18n">Doses · <span lang="ar" dir="rtl">عدد الجرعات</span></span>
-        </label>
+        <span class="dose-label-inline">剂数 <span class="dose-label-sub">Doses</span></span>
         <div class="qty-row dose-row">
           <button type="button" class="qty-btn dose-btn" data-dose-delta="-1" aria-label="减少剂数">−</button>
-          <input id="dose-count" type="number" min="1" step="1" value="1" inputmode="numeric" />
+          <input id="dose-count" type="number" min="1" step="1" value="1" inputmode="numeric" aria-label="剂数" />
           <button type="button" class="qty-btn dose-btn" data-dose-delta="1" aria-label="增加剂数">+</button>
         </div>
       </div>
@@ -67,8 +66,8 @@
           <p id="grand-total" class="grand-total">0.00 <span class="cur">DHS</span></p>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 
   <dialog id="temp-dialog" class="dialog">
     <form method="dialog" id="temp-form">
