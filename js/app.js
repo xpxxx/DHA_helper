@@ -26,13 +26,12 @@ const els = {
   empty: document.getElementById("empty-state"),
   clear: document.getElementById("btn-clear"),
   tempBtn: document.getElementById("btn-temp"),
-  grandTotal: document.getElementById("grand-total"),
+  grandTotalEl: document.getElementById("grand-total"),
   itemCount: document.getElementById("item-count"),
   totalLabel: document.getElementById("total-label"),
   perDoseTotal: document.getElementById("per-dose-total"),
+  totalBar: document.querySelector(".total-bar"),
   doseCount: document.getElementById("dose-count"),
-  doseMinus: document.getElementById("dose-minus"),
-  dosePlus: document.getElementById("dose-plus"),
   dialog: document.getElementById("temp-dialog"),
   tempForm: document.getElementById("temp-form"),
   tempName: document.getElementById("temp-name"),
@@ -203,8 +202,16 @@ function perDoseTotal() {
   return state.items.reduce((sum, item) => sum + lineTotal(item), 0);
 }
 
-function grandTotal() {
+function totalForAllDoses() {
   return perDoseTotal() * state.doses;
+}
+
+function setDoses(next) {
+  state.doses = roundDoses(next);
+  if (els.doseCount) {
+    els.doseCount.value = String(state.doses);
+  }
+  renderTotals();
 }
 
 function renderSuggest(list) {
@@ -324,11 +331,34 @@ function render() {
     })
     .join("");
 
-  const oneDose = perDoseTotal();
-  const allDoses = grandTotal();
+  renderTotals();
+}
 
-  if (els.doseCount && Number(els.doseCount.value) !== state.doses) {
+function renderTotals() {
+  const t = state.i18n;
+  const oneDose = perDoseTotal();
+  const allDoses = totalForAllDoses();
+  const hasItems = state.items.length > 0;
+
+  if (els.doseCount && document.activeElement !== els.doseCount) {
     els.doseCount.value = String(state.doses);
+  }
+
+  if (els.perDoseTotal) {
+    if (hasItems) {
+      els.perDoseTotal.hidden = false;
+      els.perDoseTotal.innerHTML = `
+        ${escapeHtml(t.perDose.zh)}（1 ${escapeHtml(t.doses.zh)}）：${money(oneDose)} ${escapeHtml(t.currency.zh)}
+        <span class="per-dose-i18n">${escapeHtml(t.perDose.en)}: ${money(oneDose)} ${escapeHtml(
+          t.currency.en
+        )} · <span lang="ar" dir="rtl">${escapeHtml(t.perDose.ar)}: ${money(oneDose)} ${escapeHtml(
+          t.currency.ar
+        )}</span></span>
+      `;
+    } else {
+      els.perDoseTotal.hidden = true;
+      els.perDoseTotal.textContent = "";
+    }
   }
 
   if (els.totalLabel) {
@@ -351,26 +381,13 @@ function render() {
     }
   }
 
-  els.grandTotal.innerHTML = priceLine(allDoses);
-
-  if (els.perDoseTotal) {
-    if (state.doses > 1 && state.items.length > 0) {
-      els.perDoseTotal.hidden = false;
-      els.perDoseTotal.innerHTML = `
-        ${escapeHtml(t.perDose.zh)}：${money(oneDose)} ${escapeHtml(t.currency.zh)}
-        <span class="per-dose-i18n">${escapeHtml(t.perDose.en)}: ${money(oneDose)} ${escapeHtml(
-          t.currency.en
-        )} · <span lang="ar" dir="rtl">${escapeHtml(t.perDose.ar)}: ${money(oneDose)} ${escapeHtml(
-          t.currency.ar
-        )}</span></span>
-      `;
-    } else {
-      els.perDoseTotal.hidden = true;
-      els.perDoseTotal.textContent = "";
-    }
+  if (els.grandTotalEl) {
+    els.grandTotalEl.innerHTML = priceLine(allDoses);
   }
 
-  els.itemCount.textContent = `${state.items.length} ${t.items.zh} · ${state.items.length} ${t.items.en}`;
+  if (els.itemCount) {
+    els.itemCount.textContent = `${state.items.length} ${t.items.zh} · ${state.items.length} ${t.items.en}`;
+  }
 }
 
 function escapeHtml(text) {
@@ -489,19 +506,19 @@ function bindEvents() {
     }
   });
 
-  els.doseMinus?.addEventListener("click", () => {
-    state.doses = roundDoses(state.doses - 1);
-    render();
+  els.totalBar?.addEventListener("click", (event) => {
+    const doseBtn = event.target.closest("[data-dose-delta]");
+    if (!doseBtn) return;
+    event.preventDefault();
+    setDoses(state.doses + Number(doseBtn.dataset.doseDelta));
   });
 
-  els.dosePlus?.addEventListener("click", () => {
-    state.doses = roundDoses(state.doses + 1);
-    render();
+  els.doseCount?.addEventListener("input", (event) => {
+    setDoses(event.target.value);
   });
 
   els.doseCount?.addEventListener("change", (event) => {
-    state.doses = roundDoses(event.target.value);
-    render();
+    setDoses(event.target.value);
   });
 
   els.tempBtn.addEventListener("click", () => {

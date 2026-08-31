@@ -440,6 +440,8 @@ select:focus {
 
 .dose-control {
   margin-bottom: 0.15rem;
+  position: relative;
+  z-index: 2;
 }
 
 .dose-label {
@@ -474,6 +476,15 @@ select:focus {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.18);
   color: #f4f8f5;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  touch-action: manipulation;
+  flex-shrink: 0;
+}
+
+.dose-btn {
+  min-width: 2.4rem;
 }
 
 .per-dose-total {

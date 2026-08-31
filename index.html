@@ -53,9 +53,9 @@
             <span class="label-i18n">Doses · <span lang="ar" dir="rtl">عدد الجرعات</span></span>
           </label>
           <div class="qty-row dose-row">
-            <button type="button" class="qty-btn" id="dose-minus" aria-label="减少剂数">−</button>
+            <button type="button" class="qty-btn dose-btn" data-dose-delta="-1" aria-label="减少剂数">−</button>
             <input id="dose-count" type="number" min="1" step="1" value="1" inputmode="numeric" />
-            <button type="button" class="qty-btn" id="dose-plus" aria-label="增加剂数">+</button>
+            <button type="button" class="qty-btn dose-btn" data-dose-delta="1" aria-label="增加剂数">+</button>
           </div>
         </div>
         <p id="item-count" class="item-count">0 项</p>
