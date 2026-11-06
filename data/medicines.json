@@ -5,9 +5,9 @@
     "药品零售价.xlsx"
   ],
   "counts": {
-    "herbs": 173,
+    "herbs": 181,
     "patents": 37,
-    "total": 210,
+    "total": 218,
     "skippedHerbsNoPrice": 9,
     "skippedPatentsNoPrice": 16
   },
@@ -108,6 +108,18 @@
       "unitAr": "غرام"
     },
     {
+      "name": "五指毛桃",
+      "type": "herb",
+      "unit": "克",
+      "price": 1.17,
+      "contains": [],
+      "relatedPatents": [],
+      "nameEn": "Hairy Fig Root",
+      "nameAr": "جذر التين الشعري",
+      "unitEn": "g",
+      "unitAr": "غرام"
+    },
+    {
       "name": "仙鹤草",
       "type": "herb",
       "unit": "克",
@@ -188,7 +200,7 @@
       "name": "北柴胡",
       "type": "herb",
       "unit": "克",
-      "price": 1.6,
+      "price": 1.94,
       "contains": [],
       "relatedPatents": [],
       "nameEn": "Chinese Thoroughwax (Bupleurum Chinense)",
@@ -197,10 +209,22 @@
       "unitAr": "غرام"
     },
     {
+      "name": "升麻",
+      "type": "herb",
+      "unit": "克",
+      "price": 1.24,
+      "contains": [],
+      "relatedPatents": [],
+      "nameEn": "Cimicifuga Rhizome",
+      "nameAr": "جذمور السيميسيفوغا",
+      "unitEn": "g",
+      "unitAr": "غرام"
+    },
+    {
       "name": "厚朴",
       "type": "herb",
       "unit": "克",
-      "price": 0.16,
+      "price": 0.22,
       "contains": [],
       "relatedPatents": [
         "桂枝茯苓丸"
@@ -541,6 +565,18 @@
       "unitAr": "غرام"
     },
     {
+      "name": "木香",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.26,
+      "contains": [],
+      "relatedPatents": [],
+      "nameEn": "Costus Root",
+      "nameAr": "جذر القسط",
+      "unitEn": "g",
+      "unitAr": "غرام"
+    },
+    {
       "name": "板蓝根",
       "type": "herb",
       "unit": "克",
@@ -549,6 +585,18 @@
       "relatedPatents": [],
       "nameEn": "Radix Isatidis",
       "nameAr": "Radix Isatidis",
+      "unitEn": "g",
+      "unitAr": "غرام"
+    },
+    {
+      "name": "枇杷叶",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.13,
+      "contains": [],
+      "relatedPatents": [],
+      "nameEn": "Loquat Leaf",
+      "nameAr": "أوراق البشملة",
       "unitEn": "g",
       "unitAr": "غرام"
     },
@@ -656,7 +704,7 @@
       "name": "桔梗",
       "type": "herb",
       "unit": "克",
-      "price": 0.58,
+      "price": 0.72,
       "contains": [],
       "relatedPatents": [],
       "nameEn": "Platycodon Grandiflorum",
@@ -716,7 +764,7 @@
       "name": "法半夏",
       "type": "herb",
       "unit": "克",
-      "price": 0.35,
+      "price": 0.9,
       "contains": [],
       "relatedPatents": [],
       "nameEn": "Rhizoma Pinelliae Praeparatum",
@@ -728,7 +776,7 @@
       "name": "泽泻",
       "type": "herb",
       "unit": "克",
-      "price": 0.2,
+      "price": 0.3,
       "contains": [],
       "relatedPatents": [],
       "nameEn": "Alisma Orientale",
@@ -752,7 +800,7 @@
       "name": "浮小麦",
       "type": "herb",
       "unit": "克",
-      "price": 0.07,
+      "price": 0.14,
       "contains": [],
       "relatedPatents": [],
       "nameEn": "Fructus Tritici Levis",
@@ -838,7 +886,7 @@
       "name": "炒山楂",
       "type": "herb",
       "unit": "克",
-      "price": 0.09,
+      "price": 0.13,
       "contains": [],
       "relatedPatents": [
         "复方板蓝根颗粒"
@@ -1127,7 +1175,7 @@
       "name": "生地黄",
       "type": "herb",
       "unit": "克",
-      "price": 0.15,
+      "price": 0.2,
       "contains": [],
       "relatedPatents": [
         "复方草珊瑚含片"
@@ -1306,6 +1354,18 @@
       "relatedPatents": [],
       "nameEn": "Bulbus Lilii",
       "nameAr": "بصلة ليلي",
+      "unitEn": "g",
+      "unitAr": "غرام"
+    },
+    {
+      "name": "皂角刺",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.65,
+      "contains": [],
+      "relatedPatents": [],
+      "nameEn": "Chinese Honeylocust Spine",
+      "nameAr": "شوك الغلاديشيا الصينية",
       "unitEn": "g",
       "unitAr": "غرام"
     },
@@ -1529,7 +1589,7 @@
       "name": "苍术",
       "type": "herb",
       "unit": "克",
-      "price": 0.4,
+      "price": 0.49,
       "contains": [],
       "relatedPatents": [],
       "nameEn": "Rhizoma Atractylodis",
@@ -1579,7 +1639,7 @@
       "name": "茯苓",
       "type": "herb",
       "unit": "克",
-      "price": 0.29,
+      "price": 0.4,
       "contains": [],
       "relatedPatents": [],
       "nameEn": "Poria Cocos",
@@ -1619,7 +1679,7 @@
       "name": "莱菔子",
       "type": "herb",
       "unit": "克",
-      "price": 0.16,
+      "price": 0.18,
       "contains": [],
       "relatedPatents": [
         "天麻头痛片"
@@ -1806,6 +1866,18 @@
       "unitAr": "غرام"
     },
     {
+      "name": "补骨脂",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.2,
+      "contains": [],
+      "relatedPatents": [],
+      "nameEn": "Psoralea Fruit",
+      "nameAr": "ثمرة البسوراليا",
+      "unitEn": "g",
+      "unitAr": "غرام"
+    },
+    {
       "name": "西洋参",
       "type": "herb",
       "unit": "克",
@@ -1921,7 +1993,7 @@
       "name": "郁金",
       "type": "herb",
       "unit": "克",
-      "price": 0.24,
+      "price": 0.27,
       "contains": [],
       "relatedPatents": [],
       "nameEn": "Radix Curcumae",
@@ -2000,6 +2072,18 @@
       "relatedPatents": [],
       "nameEn": "Saposhnikovia Divaricata",
       "nameAr": "سابوشنيكوفيا ديفاريكاتا",
+      "unitEn": "g",
+      "unitAr": "غرام"
+    },
+    {
+      "name": "阿胶",
+      "type": "herb",
+      "unit": "克",
+      "price": 15.6,
+      "contains": [],
+      "relatedPatents": [],
+      "nameEn": "Donkey-hide Gelatin",
+      "nameAr": "جيلاتين جلد الحمار",
       "unitEn": "g",
       "unitAr": "غرام"
     },
@@ -2151,11 +2235,23 @@
       "name": "黄芩片",
       "type": "herb",
       "unit": "克",
-      "price": 0.35,
+      "price": 0.44,
       "contains": [],
       "relatedPatents": [],
       "nameEn": "Baical Skullcap Root (Scutellaria Baicalensis)",
       "nameAr": "جذر بايكال سكالكاب (Scutellaria Baicalensis)",
+      "unitEn": "g",
+      "unitAr": "غرام"
+    },
+    {
+      "name": "黄芪",
+      "type": "herb",
+      "unit": "克",
+      "price": 0.43,
+      "contains": [],
+      "relatedPatents": [],
+      "nameEn": "Astragalus Root",
+      "nameAr": "جذر القتاد",
       "unitEn": "g",
       "unitAr": "غرام"
     },

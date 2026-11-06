@@ -21,6 +21,15 @@ STATIC_UNITS = {
 }
 
 MANUAL_OVERRIDES: dict[str, dict[str, str]] = {
+    # 2026-11-06 新增草药；英阿名称为 AI 初译，发布前可由专业人员复核。
+    "五指毛桃": {"en": "Hairy Fig Root", "ar": "جذر التين الشعري"},
+    "阿胶": {"en": "Donkey-hide Gelatin", "ar": "جيلاتين جلد الحمار"},
+    "皂角刺": {"en": "Chinese Honeylocust Spine", "ar": "شوك الغلاديشيا الصينية"},
+    "补骨脂": {"en": "Psoralea Fruit", "ar": "ثمرة البسوراليا"},
+    "黄芪": {"en": "Astragalus Root", "ar": "جذر القتاد"},
+    "木香": {"en": "Costus Root", "ar": "جذر القسط"},
+    "升麻": {"en": "Cimicifuga Rhizome", "ar": "جذمور السيميسيفوغا"},
+    "枇杷叶": {"en": "Loquat Leaf", "ar": "أوراق البشملة"},
     "川穹": {"en": "Chuanxiong Rhizome", "ar": "جذمور تشوانشيونغ"},
     "马齿笕": {"en": "Purslane", "ar": "رجلة"},
     "燀山桃仁（chan）": {"en": "Blanched Peach Kernel", "ar": "نواة الخوخ المسلوقة"},
