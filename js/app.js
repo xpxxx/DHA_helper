@@ -43,7 +43,39 @@ const els = {
   tempQty: document.getElementById("temp-qty"),
   tempQtyLabel: document.getElementById("temp-qty-label"),
   tempCancel: document.getElementById("temp-cancel"),
+  dataStatus: document.getElementById("data-status"),
 };
+
+async function loadMedicineData() {
+  const onlineUrl = String(window.DHA_CONFIG?.dataApiUrl || "").trim();
+  const sources = [
+    ...(onlineUrl ? [{ url: onlineUrl, label: "在线表格" }] : []),
+    { url: "data/medicines.json", label: "本地备用数据" },
+  ];
+
+  let lastError;
+  for (const source of sources) {
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 10000);
+    try {
+      const res = await fetch(source.url, {
+        cache: "no-store",
+        signal: controller.signal,
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      if (!Array.isArray(data.medicines)) throw new Error("药品数据格式无效");
+      return { data, source: source.label };
+    } catch (error) {
+      lastError = error;
+      console.warn(`Failed to load ${source.label}`, error);
+    } finally {
+      window.clearTimeout(timeout);
+    }
+  }
+  throw lastError || new Error("药品数据加载失败");
+}
 
 function money(n) {
   const value = Number.isFinite(n) ? n : 0;
@@ -581,16 +613,21 @@ async function init() {
   render();
 
   try {
-    const res = await fetch("data/medicines.json");
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
+    const { data, source } = await loadMedicineData();
     state.medicines = data.medicines || [];
     state.byName = new Map(state.medicines.map((med) => [med.name, med]));
     if (data.i18n) state.i18n = { ...state.i18n, ...data.i18n };
+    if (els.dataStatus) {
+      const updated = data.lastUpdated
+        ? ` · 更新于 ${new Date(data.lastUpdated).toLocaleString("zh-CN")}`
+        : "";
+      els.dataStatus.textContent = `数据来源：${source}${updated}`;
+    }
     render();
   } catch (error) {
     els.empty.textContent =
       "药品数据加载失败。若在本地打开，请使用本地服务器或部署到 GitHub Pages。";
+    if (els.dataStatus) els.dataStatus.textContent = "药品目录加载失败";
     console.error(error);
   }
 }
